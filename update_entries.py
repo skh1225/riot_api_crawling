@@ -1,11 +1,22 @@
 import time
 from datetime import datetime
+import argparse
 
 from utils.api_modules import ApiModule
 from utils.rds_modules import RdsModule
 from config import config
 
-def user_crawler(api_key, tier_list, start_time):
+def main():
+  parser = argparse.ArgumentParser(description='유저 엔트리를 업데이트합니다.')
+  parser.add_argument('-t', '--tier', default='EMERALD,DIAMOND,MASTER,GRANDMASTER,CHALLENGER', help='ex) PLATINUM,EMERALD')
+  parser.add_argument('-s', '--start', default='1689735600', help='start unix timestamp')
+  parser.add_argument('-k', '--key', type=int, default=0, help='config.config.api_keys num')
+  args = parser.parse_args()
+
+  api_key = config.api_keys[args.key]
+  tier_list = args.tier.split(',')
+  start_time = args.start
+
   crawler = ApiModule(api_key)
   rds = RdsModule()
   cur = rds.get_cursor(config.rds_connection)
@@ -53,8 +64,5 @@ def user_crawler(api_key, tier_list, start_time):
           page += 1
   rds.close_connection()
 
-tier_list = ['EMERALD', 'DIAMOND', 'MASTER', 'GRANDMASTER', 'CHALLENGER']
-start_time = '1689735600'
-api_key = config.api_keys[0]
-
-user_crawler(api_key, tier_list, start_time)
+if __name__ == "__main__":
+  main()

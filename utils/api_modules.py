@@ -2,8 +2,6 @@ import time
 from datetime import datetime
 import requests
 
-
-
 class ApiModule:
 
   update_user_url = {
@@ -62,6 +60,9 @@ class ApiModule:
         result = res.json()
       if res.status_code != 200:
         if res.status_code == 503:
+          continue
+        elif res.status_code == 429:
+          time.sleep(30)
           continue
         else:
           raise Exception(f'status_code: {res.status_code}')
