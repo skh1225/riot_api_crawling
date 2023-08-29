@@ -30,7 +30,6 @@ class ApiModule:
      self.timestamp = timestamp
 
   def _check_limit(self, limit_count):
-    print("RateLimit:", limit_count)
     second, minute = limit_count.split(',')
     s_cnt, m_cnt = second.split(':')[0], minute.split(':')[0]
 
