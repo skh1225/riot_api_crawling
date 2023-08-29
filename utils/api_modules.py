@@ -50,20 +50,24 @@ class ApiModule:
     tier : ['EMERALD', 'DIAMOND', 'MASTER', 'GRANDMASTER', 'CHALLENGER']
     division : ['I', 'II', 'III', 'IV']
     '''
-    if page%5 == 0 or page == None:
-      print(f'{datetime.now()} tier/div/page : {tier}/{div}/{page}')
-    if tier in ['MASTER', 'GRANDMASTER', 'CHALLENGER']:
-      url = self.update_user_url[tier]
-      res = requests.get(url, headers=self.headers)
-      result = res.json()['entries']
-    else:
-      url = self.update_user_url['else'] + f'/{tier}/{self.division[div]}'
-      res = requests.get(url, headers=self.headers, params={ "page": page })
-      result = res.json()
-    if res.status_code != 200:
-      raise Exception(f'status_code: {res.status_code}')
-    sleep_time = self._check_limit(res.headers['X-App-Rate-Limit-Count'])
-
+    while True:
+      if page%5 == 0 or page == None:
+        print(f'{datetime.now()} tier/div/page : {tier}/{div}/{page}')
+      if tier in ['MASTER', 'GRANDMASTER', 'CHALLENGER']:
+        url = self.update_user_url[tier]
+        res = requests.get(url, headers=self.headers)
+        result = res.json()['entries']
+      else:
+        url = self.update_user_url['else'] + f'/{tier}/{self.division[div]}'
+        res = requests.get(url, headers=self.headers, params={ "page": page })
+        result = res.json()
+      if res.status_code != 200:
+        if res.status_code == 503:
+          continue
+        else:
+          raise Exception(f'status_code: {res.status_code}')
+      sleep_time = self._check_limit(res.headers['X-App-Rate-Limit-Count'])
+      break
     return result, sleep_time
 
 
