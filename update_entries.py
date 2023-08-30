@@ -9,13 +9,12 @@ from config import config
 def main():
   parser = argparse.ArgumentParser(description='유저 엔트리를 업데이트합니다.')
   parser.add_argument('-t', '--tier', default='EMERALD,DIAMOND,MASTER,GRANDMASTER,CHALLENGER', help='ex) PLATINUM,EMERALD')
-  parser.add_argument('-s', '--start', default='1689735600', help='start unix timestamp')
   parser.add_argument('-k', '--key', type=int, default=0, help='config.config.api_keys num')
+  parser.add_argument('-u','--update', action='store_true')
   args = parser.parse_args()
 
   api_key = config.api_keys[args.key]
   tier_list = args.tier.split(',')
-  start_time = args.start
 
   crawler = ApiModule(api_key)
   rds = RdsModule()
@@ -27,7 +26,7 @@ def main():
       result, sleep_time = crawler.get_user_entries(tier)
       query = []
       for entry in result:
-        query.append(f"('{entry['summonerId']}',{entry['wins']+entry['losses']},'{tier}',{start_time})")
+        query.append(f"('{entry['summonerId']}',{entry['wins']+entry['losses']},'{tier}'")
       try:
         cur.execute(rds.sql_users_insert_record(','.join(query)))
       except Exception as e:
@@ -43,7 +42,7 @@ def main():
         result, sleep_time = crawler.get_user_entries(tier,div,page)
         query = []
         for entry in result:
-          query.append(f"('{entry['summonerId']}',{entry['wins']+entry['losses']},'{tier}',{start_time})")
+          query.append(f"('{entry['summonerId']}',{entry['wins']+entry['losses']},'{tier}')")
 
         if query:
           try:
@@ -62,6 +61,8 @@ def main():
           div += 1
         else:
           page += 1
+  if args.update:
+    cur.execute(rds.sql_users_update_num_to_match_num())
   rds.close_connection()
 
 if __name__ == "__main__":

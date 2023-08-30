@@ -8,7 +8,9 @@ class ApiModule:
       "MASTER": "https://kr.api.riotgames.com/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5",
       "GRANDMASTER": "https://kr.api.riotgames.com/lol/league/v4/grandmasterleagues/by-queue/RANKED_SOLO_5x5",
       "CHALLENGER": "https://kr.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5",
-      "else": "https://kr.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5"
+      "else": "https://kr.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5",
+      "puuid": "https://kr.api.riotgames.com/lol/summoner/v4/summoners",
+      "match_list": "https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid"
   }
 
   division = {
@@ -48,7 +50,7 @@ class ApiModule:
     division : ['I', 'II', 'III', 'IV']
     '''
     while True:
-      if page%5 == 0 or page == None:
+      if page == None or page%5 == 0:
         print(f'{datetime.now()} tier/div/page : {tier}/{div}/{page}')
       if tier in ['MASTER', 'GRANDMASTER', 'CHALLENGER']:
         url = self.update_user_url[tier]
@@ -70,6 +72,47 @@ class ApiModule:
       break
     return result, sleep_time
 
+  def get_puuid(self,summonerid):
+    url = self.update_user_url['puuid'] + f'/{summonerid}'
+    while True:
+      res = requests.get(url, headers=self.headers)
+      if res.status_code != 200:
+        if res.status_code == 503:
+          continue
+        elif res.status_code == 429:
+          time.sleep(30)
+          continue
+        else:
+          raise Exception(f'status_code: {res.status_code}')
+      sleep_time = self._check_limit(res.headers['X-App-Rate-Limit-Count'])
+      result = res.json()['puuid']
+      break
+    return result, sleep_time
+
+  def get_match_list(self,puuid,start):
+    url = self.update_user_url['match_list'] + f'/{puuid}/ids'
+    params = {
+      "startTime": 1689735600,
+      "queue": 420,
+      "type": "ranked",
+      "start": start,
+      "count": 100
+    }
+    while True:
+      res = requests.get(url, headers=self.headers, params=params)
+      if res.status_code != 200:
+        if res.status_code == 503:
+          continue
+        elif res.status_code == 429:
+          time.sleep(30)
+          continue
+        else:
+          raise Exception(f'status_code: {res.status_code}')
+      sleep_time = self._check_limit(res.headers['X-App-Rate-Limit-Count'])
+      result = res.json()
+      break
+
+    return result, sleep_time
 
 
 
