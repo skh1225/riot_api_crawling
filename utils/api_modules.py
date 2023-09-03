@@ -64,7 +64,7 @@ class ApiModule:
         if res.status_code == 503:
           continue
         elif res.status_code == 429:
-          time.sleep(30)
+          time.sleep(int(res.headers['Retry-After']))
           continue
         else:
           raise Exception(f'status_code: {res.status_code}')
@@ -80,7 +80,7 @@ class ApiModule:
         if res.status_code == 503:
           continue
         elif res.status_code == 429:
-          time.sleep(30)
+          time.sleep(int(res.headers['Retry-After']))
           continue
         else:
           raise Exception(f'status_code: {res.status_code}')
@@ -104,7 +104,7 @@ class ApiModule:
         if res.status_code == 503:
           continue
         elif res.status_code == 429:
-          time.sleep(30)
+          time.sleep(int(res.headers['Retry-After']))
           continue
         else:
           raise Exception(f'status_code: {res.status_code}')

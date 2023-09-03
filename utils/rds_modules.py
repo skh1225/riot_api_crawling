@@ -38,6 +38,21 @@ class RdsModule:
           );
           """
 
+    def sql_match_update_status(self, match_id):
+        return f"""
+          UPDATE match
+          SET status=TRUE
+          WHERE matchid='{match_id}';
+          """
+
+    def sql_match_refill(self, batch_size):
+        return f"""
+          SELECT matchid, tier
+          FROM match
+          WHERE status=FALSE
+          LIMIT {batch_size};
+          """
+
     def sql_users_insert_record(self, values):
         return f"""
           INSERT INTO users
