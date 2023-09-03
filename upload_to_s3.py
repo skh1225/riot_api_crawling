@@ -38,8 +38,8 @@ class AsyncApiCall:
 
   async def _request_data(self, session, match_id, tier, headers):
     url = f"https://asia.api.riotgames.com/lol/match/v5/matches/{match_id}"
-    async with session.get(url, headers=headers) as response:
-      while True:
+    while True:
+      async with session.get(url, headers=headers) as response:
         data = await response.json()
         status_code = response.status
         headers = response.headers
@@ -47,6 +47,7 @@ class AsyncApiCall:
           if status_code == 503:
             continue
           elif status_code == 429:
+            print(f'{datetime.now()}: 100 requests done!')
             await asyncio.sleep(int(headers['Retry-After']))
             continue
           else:
