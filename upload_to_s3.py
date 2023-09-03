@@ -49,14 +49,16 @@ class AsyncApiCall:
           elif status_code == 429:
             print(f'{datetime.now()}: 100 requests done!')
             await asyncio.sleep(int(headers['Retry-After']))
-            continue
-          else:
+            print(f'{datetime.now()}: {status_code} retry!')
             return
-        data['metadata'] = {
-          "matchId": match_id,
-          "tier": tier
-        }
-        return data
+          else:
+            print(f'{datetime.now()}: {status_code} retry!')
+      data['metadata'] = {
+        "matchId": match_id,
+        "tier": tier
+      }
+      ## print(f'{datetime.now()}: {match_id} request complete!')
+      return data
 
   async def executor(self,api_num,session):
     batch_size = 1000
@@ -89,7 +91,10 @@ class AsyncApiCall:
       data = await self._request_data(session, match_id, tier, headers)
       await self.lock.acquire()
       ## match_id append to data
-      self.data.append(data)
+      if data:
+        self.data.append(data)
+      else:
+        self.match_ids.append((match_id, tier))
       if len(self.data) == batch_size:
         ## data to s3, db 반영, data init
         self._upload_to_s3()
@@ -97,7 +102,7 @@ class AsyncApiCall:
 
   async def start(self,n):
     async with aiohttp.ClientSession() as session:
-      await asyncio.gather(*[self.executor(i,session) for i in range(n)])
+      await asyncio.gather(*[self.executor(i, session) for i in range(n)])
 
 test = AsyncApiCall()
 
