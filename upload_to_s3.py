@@ -63,9 +63,7 @@ class AsyncApiCall:
       ## print(f'{datetime.now()}: {match_id} request complete!')
       return data
 
-  async def executor(self,api_num,session):
-    batch_size = 1000
-
+  async def executor(self,api_num,session,batch_size):
     headers = {
         "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
         "Origin": "https://developer.riotgames.com",
@@ -107,21 +105,23 @@ class AsyncApiCall:
         self._upload_to_s3()
       self.lock.release()
 
-  async def start(self,n):
+  async def start(self,n,batch_size):
     async with aiohttp.ClientSession() as session:
-      await asyncio.gather(*[self.executor(i, session) for i in range(1,n+1)])
+      await asyncio.gather(*[self.executor(i, session, batch_size) for i in range(1,n+1)])
 
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='매치 데이터를 업데이트 합니다.')
-  parser.add_argument('-n','--num', type=int, default=13, help='사용할 api key의 수')
+  parser.add_argument('-n','--num', type=int, default=12, help='사용할 api key의 수')
+  parser.add_argument('-b','--batch', type=int, default=1800, help='사용할 api key의 수')
+
   args = parser.parse_args()
 
   test = AsyncApiCall()
 
   try:
     test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
-    asyncio.run(test.start(args.num))
+    asyncio.run(test.start(args.num,args.batch))
   except:
     print("shut down...")
     test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
