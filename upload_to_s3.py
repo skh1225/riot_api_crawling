@@ -105,14 +105,15 @@ class AsyncApiCall:
         self._upload_to_s3()
       self.lock.release()
 
-  async def start(self,n,batch_size):
+  async def start(self,start,end,batch_size):
     async with aiohttp.ClientSession() as session:
-      await asyncio.gather(*[self.executor(i, session, batch_size) for i in range(1,n+1)])
+      await asyncio.gather(*[self.executor(i, session, batch_size) for i in range(start, end)])
 
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='매치 데이터를 업데이트 합니다.')
-  parser.add_argument('-n','--num', type=int, default=12, help='사용할 api key의 수')
+  parser.add_argument('-s','--start', type=int, default=0, help='사용할 api key 시작 index')
+  parser.add_argument('-e','--end', type=int, default=12, help='사용할 api key 끝 index')
   parser.add_argument('-b','--batch', type=int, default=1800, help='사용할 api key의 수')
 
   args = parser.parse_args()
@@ -121,7 +122,7 @@ if __name__ == "__main__":
 
   try:
     test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
-    asyncio.run(test.start(args.num,args.batch))
+    asyncio.run(test.start(args.start,args.end,args.batch))
   except:
     print("shut down...")
     test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
