@@ -31,28 +31,28 @@ class AsyncApiCall:
     print(f'{datetime.now()}: {len(self.data)} uploaded!')
     self.rds_module.conn.autocommit = True
     self.data = []
+    self.rds_cur.execute("SELECT count(*) from match where status=True;")
+    print(f'total_upload_rds: {self.rds_cur.fetchall()} ')
 
   def _match_refill(self, batch_size):
     self.rds_cur.execute(self.rds_module.sql_match_refill(batch_size))
     self.match_ids = self.rds_cur.fetchall()
+    for match_id, _ in self.match_ids:
+      self.rds_cur.execute(f"UPDATE match SET status=NULL WHERE matchid='{match_id}'")
+
 
   async def _request_data(self, session, match_id, tier, headers):
     url = f"https://asia.api.riotgames.com/lol/match/v5/matches/{match_id}"
-    while True:
-      async with session.get(url, headers=headers) as response:
-        data = await response.json()
-        status_code = response.status
-        headers = response.headers
-        if status_code != 200:
-          if status_code == 503:
-            continue
-          elif status_code == 429:
-            print(f'{datetime.now()}: 100 requests done!')
-            await asyncio.sleep(int(headers['Retry-After']))
-            print(f'{datetime.now()}: {status_code} retry!')
-            return
-          else:
-            print(f'{datetime.now()}: {status_code} retry!')
+    async with session.get(url, headers=headers) as response:
+      data = await response.json()
+      status_code = response.status
+      headers = response.headers
+      if status_code != 200:
+        if status_code == 429:
+          print(f'{datetime.now()}: 100 requests done!')
+          await asyncio.sleep(int(headers['Retry-After']))
+        print(f'{datetime.now()}: {status_code} retry!')
+        return
       data['metadata'] = {
         "matchId": match_id,
         "tier": tier
@@ -106,4 +106,8 @@ class AsyncApiCall:
 
 test = AsyncApiCall()
 
-asyncio.run(test.start(3))
+try:
+  asyncio.run(test.start(3))
+except:
+  test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
+  test.rds_module.close_connection()
