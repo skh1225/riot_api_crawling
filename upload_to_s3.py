@@ -120,6 +120,7 @@ if __name__ == "__main__":
   test = AsyncApiCall()
 
   try:
+    test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
     asyncio.run(test.start(args.num))
   except:
     print("shut down...")
