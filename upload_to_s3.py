@@ -51,6 +51,8 @@ class AsyncApiCall:
         if status_code == 429:
           print(f'{datetime.now()}: 100 requests done!')
           await asyncio.sleep(int(headers['Retry-After']))
+        elif status_code == 403:
+          raise Exception(f'{datetime.now()}: {status_code} error!')
         print(f'{datetime.now()}: {status_code} retry!')
         return
       data['metadata'] = {
@@ -109,5 +111,6 @@ test = AsyncApiCall()
 try:
   asyncio.run(test.start(3))
 except:
+  print("shut down...")
   test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
   test.rds_module.close_connection()
