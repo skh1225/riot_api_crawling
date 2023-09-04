@@ -1,2 +1,4 @@
 config/config.py
+./cofig/*.json
+*.json
 test.py

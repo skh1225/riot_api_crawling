@@ -1,7 +1,8 @@
+import os
 import asyncio
 import aiohttp
 import json
-import boto3
+from google.cloud import storage
 import time
 import argparse
 from datetime import datetime
@@ -13,19 +14,20 @@ class AsyncApiCall:
     self.data=[]
     self.match_ids=[]
     self.is_last=False
-    self.s3_conn = boto3.resource('s3', **config.s3_connection)
-    self.rds_module = rds_modules.RdsModule()
-    self.rds_cur = self.rds_module.get_cursor(config.rds_connection)
+    self.gcs_client=storage.Client()
+    self.rds_module=rds_modules.RdsModule()
+    self.rds_cur=self.rds_module.get_cursor(config.rds_connection)
     self.lock=asyncio.Lock()
 
-  def _upload_to_s3(self):
-    s3object = self.s3_conn.Object('summoner-match', f'{int(time.time())}.json')
+  def _upload_to_gcs(self):
+    bucket = self.gcs_client.bucket('summoner-match')
+    blob = bucket.blob(f'{int(time.time())}.json')
     self.rds_module.conn.autocommit = False
 
     try:
       for data in self.data:
         self.rds_cur.execute(self.rds_module.sql_match_update_status(data['metadata']['matchId']))
-      s3object.put(Body=(bytes(json.dumps(self.data).encode('UTF-8'))))
+      blob.upload_from_string(data=json.dumps(self.data),content_type='application/json')
       self.rds_module.conn.commit()
     except:
       self.rds_module.conn.rollback()
@@ -76,7 +78,7 @@ class AsyncApiCall:
         if self.is_last:
           if self.data:
             ## data to s3, db 반영, data init
-            self._upload_to_s3()
+            self._upload_to_gcs()
           self.lock.release()
           break
         ## match_update
@@ -102,7 +104,7 @@ class AsyncApiCall:
         self.match_ids.append((match_id, tier))
       if len(self.data) == batch_size:
         ## data to s3, db 반영, data init
-        self._upload_to_s3()
+        self._upload_to_gcs()
       self.lock.release()
 
   async def start(self,start,end,batch_size):
@@ -111,6 +113,7 @@ class AsyncApiCall:
 
 
 if __name__ == "__main__":
+  os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="./config/fourth-way-398009-b0ce29a3bf47.json"
   parser = argparse.ArgumentParser(description='매치 데이터를 업데이트 합니다.')
   parser.add_argument('-s','--start', type=int, default=0, help='사용할 api key 시작 index')
   parser.add_argument('-e','--end', type=int, default=12, help='사용할 api key 끝 index')
