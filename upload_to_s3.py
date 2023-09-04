@@ -3,6 +3,7 @@ import aiohttp
 import json
 import boto3
 import time
+import argparse
 from datetime import datetime
 from config import config
 from utils import rds_modules
@@ -90,7 +91,11 @@ class AsyncApiCall:
       match_id, tier = self.match_ids.pop()
       self.lock.release()
       ## request, request rate control
-      data = await self._request_data(session, match_id, tier, headers)
+      try:
+        data = await self._request_data(session, match_id, tier, headers)
+      except Exception as e:
+        print(e, api_num)
+        raise e
       await self.lock.acquire()
       ## match_id append to data
       if data:
@@ -106,11 +111,17 @@ class AsyncApiCall:
     async with aiohttp.ClientSession() as session:
       await asyncio.gather(*[self.executor(i, session) for i in range(n)])
 
-test = AsyncApiCall()
 
-try:
-  asyncio.run(test.start(3))
-except:
-  print("shut down...")
-  test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
-  test.rds_module.close_connection()
+if __name__ == "__main__":
+  parser = argparse.ArgumentParser(description='매치 데이터를 업데이트 합니다.')
+  parser.add_argument('-n','--num', type=int, default=7, help='사용할 api key의 수')
+  args = parser.parse_args()
+
+  test = AsyncApiCall()
+
+  try:
+    asyncio.run(test.start(args.num))
+  except:
+    print("shut down...")
+    test.rds_cur.execute("UPDATE match SET status=False WHERE status is NULL;")
+    test.rds_module.close_connection()
