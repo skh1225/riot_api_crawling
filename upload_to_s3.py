@@ -109,12 +109,12 @@ class AsyncApiCall:
 
   async def start(self,n):
     async with aiohttp.ClientSession() as session:
-      await asyncio.gather(*[self.executor(i, session) for i in range(n)])
+      await asyncio.gather(*[self.executor(i, session) for i in range(1,n+1)])
 
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='매치 데이터를 업데이트 합니다.')
-  parser.add_argument('-n','--num', type=int, default=7, help='사용할 api key의 수')
+  parser.add_argument('-n','--num', type=int, default=13, help='사용할 api key의 수')
   args = parser.parse_args()
 
   test = AsyncApiCall()
