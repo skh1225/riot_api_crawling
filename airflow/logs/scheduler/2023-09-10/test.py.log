@@ -1,0 +1,1364 @@
+[2023-09-10T14:35:35.334+0000] {processor.py:153} INFO - Started process (PID=9035) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:35:35.335+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:35:35.336+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:35:35.336+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:35:35.933+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:35:35.932+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:35:35.934+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:35:35.951+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.623 seconds
+[2023-09-10T14:36:06.359+0000] {processor.py:153} INFO - Started process (PID=9059) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:36:06.362+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:36:06.363+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:36:06.363+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:36:06.986+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:36:06.984+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:36:06.986+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:36:07.005+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.651 seconds
+[2023-09-10T14:36:37.600+0000] {processor.py:153} INFO - Started process (PID=9089) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:36:37.602+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:36:37.604+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:36:37.603+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:36:38.149+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:36:38.147+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:36:38.150+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:36:38.166+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.570 seconds
+[2023-09-10T14:37:08.769+0000] {processor.py:153} INFO - Started process (PID=9113) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:37:08.772+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:37:08.773+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:37:08.773+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:37:09.293+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:37:09.292+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:37:09.294+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:37:09.310+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.546 seconds
+[2023-09-10T14:37:40.178+0000] {processor.py:153} INFO - Started process (PID=9138) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:37:40.182+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:37:40.184+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:37:40.184+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:37:40.707+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:37:40.705+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:37:40.708+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:37:40.722+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.553 seconds
+[2023-09-10T14:38:11.079+0000] {processor.py:153} INFO - Started process (PID=9162) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:38:11.083+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:38:11.084+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:38:11.084+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:38:11.589+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:38:11.587+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:38:11.589+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:38:11.604+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.532 seconds
+[2023-09-10T14:38:41.748+0000] {processor.py:153} INFO - Started process (PID=9186) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:38:41.751+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:38:41.754+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:38:41.753+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:38:42.225+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:38:42.224+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:38:42.226+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:38:42.239+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.498 seconds
+[2023-09-10T14:39:12.608+0000] {processor.py:153} INFO - Started process (PID=9210) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:39:12.610+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:39:12.611+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:39:12.610+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:39:13.125+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:39:13.123+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:39:13.126+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:39:13.139+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.534 seconds
+[2023-09-10T14:39:43.522+0000] {processor.py:153} INFO - Started process (PID=9234) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:39:43.524+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:39:43.526+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:39:43.526+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:39:44.091+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:39:44.089+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:39:44.091+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:39:44.105+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.591 seconds
+[2023-09-10T14:40:14.674+0000] {processor.py:153} INFO - Started process (PID=9258) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:40:14.676+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:40:14.678+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:40:14.678+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:40:15.193+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:40:15.191+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:40:15.193+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:40:15.210+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.545 seconds
+[2023-09-10T14:40:45.662+0000] {processor.py:153} INFO - Started process (PID=9282) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:40:45.664+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:40:45.665+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:40:45.665+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:40:46.212+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:40:46.210+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:40:46.212+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:40:46.226+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.568 seconds
+[2023-09-10T14:41:16.936+0000] {processor.py:153} INFO - Started process (PID=9306) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:41:16.938+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:41:16.939+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:41:16.939+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:41:17.533+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:41:17.530+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:41:17.534+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:41:17.547+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.614 seconds
+[2023-09-10T14:41:47.890+0000] {processor.py:153} INFO - Started process (PID=9330) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:41:47.894+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:41:47.895+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:41:47.895+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:41:48.359+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:41:48.358+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:41:48.361+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:41:48.375+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.491 seconds
+[2023-09-10T14:42:19.102+0000] {processor.py:153} INFO - Started process (PID=9354) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:42:19.105+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:42:19.107+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:42:19.107+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:42:19.619+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:42:19.618+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:42:19.620+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:42:19.635+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.537 seconds
+[2023-09-10T14:42:50.115+0000] {processor.py:153} INFO - Started process (PID=9378) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:42:50.117+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:42:50.118+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:42:50.118+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:42:50.603+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:42:50.601+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:42:50.604+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:42:50.619+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.506 seconds
+[2023-09-10T14:43:21.351+0000] {processor.py:153} INFO - Started process (PID=9402) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:43:21.353+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:43:21.355+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:43:21.354+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:43:21.953+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:43:21.951+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:43:21.954+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:43:21.972+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.626 seconds
+[2023-09-10T14:43:52.389+0000] {processor.py:153} INFO - Started process (PID=9426) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:43:52.392+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:43:52.394+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:43:52.394+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:43:52.877+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:43:52.875+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:43:52.878+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:43:52.890+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.509 seconds
+[2023-09-10T14:44:23.474+0000] {processor.py:153} INFO - Started process (PID=9450) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:44:23.477+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:44:23.479+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:44:23.479+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:44:23.946+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:44:23.945+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:44:23.947+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:44:23.959+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.493 seconds
+[2023-09-10T14:44:54.784+0000] {processor.py:153} INFO - Started process (PID=9475) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:44:54.789+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:44:54.791+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:44:54.791+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:44:55.398+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:44:55.396+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:44:55.400+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:44:55.419+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.641 seconds
+[2023-09-10T14:45:25.746+0000] {processor.py:153} INFO - Started process (PID=9499) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:45:25.750+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:45:25.751+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:45:25.751+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:45:26.228+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:45:26.227+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:45:26.229+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:45:26.242+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.503 seconds
+[2023-09-10T14:45:56.516+0000] {processor.py:153} INFO - Started process (PID=9523) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:45:56.518+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:45:56.519+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:45:56.519+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:45:57.036+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:45:57.035+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:45:57.038+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:45:57.052+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.541 seconds
+[2023-09-10T14:46:27.213+0000] {processor.py:153} INFO - Started process (PID=9553) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:46:27.215+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:46:27.216+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:46:27.216+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:46:27.701+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:46:27.699+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:46:27.702+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:46:27.714+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.505 seconds
+[2023-09-10T14:46:58.538+0000] {processor.py:153} INFO - Started process (PID=9577) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:46:58.540+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:46:58.541+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:46:58.541+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:46:59.238+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:46:59.236+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:46:59.240+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:46:59.257+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.723 seconds
+[2023-09-10T14:47:29.619+0000] {processor.py:153} INFO - Started process (PID=9604) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:47:29.623+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:47:29.625+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:47:29.624+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:47:30.094+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:47:30.093+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:47:30.095+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:47:30.107+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.496 seconds
+[2023-09-10T14:48:00.374+0000] {processor.py:153} INFO - Started process (PID=9628) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:48:00.377+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:48:00.379+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:48:00.378+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:48:01.020+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:48:01.018+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:48:01.022+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:48:01.041+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.673 seconds
+[2023-09-10T14:48:31.453+0000] {processor.py:153} INFO - Started process (PID=9652) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:48:31.455+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:48:31.456+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:48:31.456+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:48:32.080+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:48:32.078+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:48:32.081+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:48:32.098+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.650 seconds
+[2023-09-10T14:49:02.592+0000] {processor.py:153} INFO - Started process (PID=9676) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:49:02.595+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:49:02.596+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:49:02.596+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:49:03.158+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:49:03.156+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:49:03.159+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:49:03.175+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.587 seconds
+[2023-09-10T14:49:33.394+0000] {processor.py:153} INFO - Started process (PID=9700) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:49:33.398+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:49:33.400+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:49:33.400+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:49:33.904+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:49:33.902+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:49:33.905+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:49:33.921+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.535 seconds
+[2023-09-10T14:50:04.301+0000] {processor.py:153} INFO - Started process (PID=9724) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:50:04.304+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:50:04.306+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:50:04.306+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:50:05.006+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:50:05.004+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:50:05.007+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:50:05.027+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.734 seconds
+[2023-09-10T14:50:35.294+0000] {processor.py:153} INFO - Started process (PID=9748) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:50:35.296+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:50:35.297+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:50:35.297+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:50:35.871+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:50:35.870+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:50:35.872+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:50:35.889+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.604 seconds
+[2023-09-10T14:51:06.218+0000] {processor.py:153} INFO - Started process (PID=9772) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:51:06.220+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:51:06.222+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:51:06.222+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:51:06.761+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:51:06.759+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:51:06.762+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:51:06.777+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.564 seconds
+[2023-09-10T14:51:37.223+0000] {processor.py:153} INFO - Started process (PID=9796) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:51:37.227+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:51:37.229+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:51:37.229+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:51:37.845+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:51:37.843+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:51:37.846+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:51:37.861+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.643 seconds
+[2023-09-10T14:52:08.598+0000] {processor.py:153} INFO - Started process (PID=9820) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:52:08.602+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:52:08.603+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:52:08.603+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:52:09.122+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:52:09.121+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:52:09.123+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:52:09.136+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.547 seconds
+[2023-09-10T14:52:39.456+0000] {processor.py:153} INFO - Started process (PID=9844) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:52:39.458+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:52:39.459+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:52:39.459+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:52:40.006+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:52:40.004+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:52:40.006+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:52:40.021+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.569 seconds
+[2023-09-10T14:53:10.162+0000] {processor.py:153} INFO - Started process (PID=9878) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:53:10.165+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:53:10.166+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:53:10.166+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:53:10.667+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:53:10.666+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:53:10.668+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:53:10.681+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.526 seconds
+[2023-09-10T14:53:40.930+0000] {processor.py:153} INFO - Started process (PID=9902) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:53:40.932+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:53:40.934+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:53:40.934+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:53:41.552+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:53:41.550+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:53:41.553+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:53:41.567+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.645 seconds
+[2023-09-10T14:54:12.014+0000] {processor.py:153} INFO - Started process (PID=9926) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:54:12.018+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:54:12.019+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:54:12.019+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:54:12.491+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:54:12.490+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:54:12.492+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:54:12.505+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.499 seconds
+[2023-09-10T14:54:43.103+0000] {processor.py:153} INFO - Started process (PID=9950) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:54:43.105+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:54:43.107+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:54:43.107+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:54:43.605+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:54:43.604+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:54:43.606+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:54:43.619+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.521 seconds
+[2023-09-10T14:55:14.139+0000] {processor.py:153} INFO - Started process (PID=9974) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:55:14.141+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:55:14.142+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:55:14.142+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:55:14.666+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:55:14.664+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:55:14.667+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:55:14.680+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.547 seconds
+[2023-09-10T14:55:45.242+0000] {processor.py:153} INFO - Started process (PID=9998) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:55:45.245+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:55:45.246+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:55:45.246+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:55:45.730+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:55:45.729+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:55:45.731+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:55:45.745+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.508 seconds
+[2023-09-10T14:56:16.450+0000] {processor.py:153} INFO - Started process (PID=10029) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:56:16.453+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:56:16.454+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:56:16.454+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:56:16.968+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:56:16.967+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:56:16.969+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:56:16.982+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.539 seconds
+[2023-09-10T14:56:47.356+0000] {processor.py:153} INFO - Started process (PID=10068) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:56:47.358+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:56:47.359+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:56:47.359+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:56:48.130+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:56:48.128+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:56:48.131+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:56:48.149+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.799 seconds
+[2023-09-10T14:57:18.573+0000] {processor.py:153} INFO - Started process (PID=10092) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:57:18.577+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:57:18.579+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:57:18.579+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:57:19.096+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:57:19.094+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:57:19.097+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:57:19.113+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.551 seconds
+[2023-09-10T14:57:49.644+0000] {processor.py:153} INFO - Started process (PID=10116) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:57:49.646+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:57:49.648+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:57:49.647+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:57:50.210+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:57:50.208+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:57:50.211+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:57:50.231+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.592 seconds
+[2023-09-10T14:58:20.639+0000] {processor.py:153} INFO - Started process (PID=10140) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:58:20.642+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:58:20.643+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:58:20.643+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:58:21.214+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:58:21.212+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:58:21.216+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:58:21.231+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.598 seconds
+[2023-09-10T14:58:51.810+0000] {processor.py:153} INFO - Started process (PID=10164) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:58:51.812+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:58:51.813+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:58:51.813+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:58:52.405+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:58:52.404+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:58:52.406+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:58:52.420+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.618 seconds
+[2023-09-10T14:59:22.767+0000] {processor.py:153} INFO - Started process (PID=10188) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:59:22.768+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:59:22.769+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:59:22.769+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:59:23.402+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:59:23.400+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:59:23.404+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:59:23.421+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.658 seconds
+[2023-09-10T14:59:53.740+0000] {processor.py:153} INFO - Started process (PID=10212) to work on /opt/airflow/dags/test.py
+[2023-09-10T14:59:53.741+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T14:59:53.742+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:59:53.742+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T14:59:54.337+0000] {logging_mixin.py:137} INFO - [2023-09-10T14:59:54.336+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T14:59:54.338+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T14:59:54.351+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.615 seconds
+[2023-09-10T15:00:24.713+0000] {processor.py:153} INFO - Started process (PID=10236) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:00:24.715+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:00:24.716+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:00:24.716+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:00:25.281+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:00:25.280+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:00:25.283+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:00:25.298+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.589 seconds
+[2023-09-10T15:00:55.641+0000] {processor.py:153} INFO - Started process (PID=10259) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:00:55.645+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:00:55.647+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:00:55.647+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:00:56.134+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:00:56.132+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:00:56.135+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:00:56.147+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.513 seconds
+[2023-09-10T15:01:26.521+0000] {processor.py:153} INFO - Started process (PID=10282) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:01:26.525+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:01:26.526+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:01:26.526+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:01:26.997+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:01:26.995+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:01:26.998+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:01:27.010+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.496 seconds
+[2023-09-10T15:01:57.414+0000] {processor.py:153} INFO - Started process (PID=10306) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:01:57.416+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:01:57.416+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:01:57.416+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:01:57.920+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:01:57.918+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:01:57.920+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:01:57.935+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.526 seconds
+[2023-09-10T15:02:28.632+0000] {processor.py:153} INFO - Started process (PID=10330) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:02:28.634+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:02:28.636+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:02:28.636+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:02:29.211+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:02:29.209+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:02:29.212+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:02:29.227+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.599 seconds
+[2023-09-10T15:02:59.454+0000] {processor.py:153} INFO - Started process (PID=10354) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:02:59.456+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:02:59.457+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:02:59.457+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:02:59.993+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:02:59.991+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:02:59.994+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:03:00.006+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.557 seconds
+[2023-09-10T15:03:30.390+0000] {processor.py:153} INFO - Started process (PID=10378) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:03:30.392+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:03:30.393+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:03:30.393+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:03:30.874+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:03:30.872+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:03:30.874+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:03:30.889+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.503 seconds
+[2023-09-10T15:04:01.196+0000] {processor.py:153} INFO - Started process (PID=10402) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:04:01.198+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:04:01.199+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:04:01.199+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:04:01.723+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:04:01.721+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:04:01.723+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:04:01.736+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.544 seconds
+[2023-09-10T15:04:31.993+0000] {processor.py:153} INFO - Started process (PID=10426) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:04:31.996+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:04:31.998+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:04:31.998+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:04:32.546+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:04:32.544+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:04:32.547+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:04:32.564+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.577 seconds
+[2023-09-10T15:05:02.727+0000] {processor.py:153} INFO - Started process (PID=10450) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:05:02.731+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:05:02.733+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:05:02.732+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:05:03.284+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:05:03.282+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:05:03.284+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:05:03.298+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.579 seconds
+[2023-09-10T15:05:33.721+0000] {processor.py:153} INFO - Started process (PID=10474) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:05:33.723+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:05:33.724+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:05:33.724+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:05:34.373+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:05:34.371+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:05:34.374+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:05:34.393+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.680 seconds
+[2023-09-10T15:06:04.571+0000] {processor.py:153} INFO - Started process (PID=10498) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:06:04.572+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:06:04.574+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:06:04.573+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:06:05.220+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:06:05.218+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:06:05.221+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:06:05.239+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.674 seconds
+[2023-09-10T15:06:35.688+0000] {processor.py:153} INFO - Started process (PID=10522) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:06:35.690+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:06:35.692+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:06:35.692+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:06:36.205+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:06:36.203+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:06:36.206+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:06:36.222+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.540 seconds
+[2023-09-10T15:07:06.481+0000] {processor.py:153} INFO - Started process (PID=10546) to work on /opt/airflow/dags/test.py
+[2023-09-10T15:07:06.483+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-09-10T15:07:06.485+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:07:06.484+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-09-10T15:07:07.095+0000] {logging_mixin.py:137} INFO - [2023-09-10T15:07:07.093+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test.py", line 54, in <module>
+    start >> task >> task1 >> [failure, success, all_done]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 181, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 66, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'update_relative' not found
+[2023-09-10T15:07:07.096+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/test.py
+[2023-09-10T15:07:07.109+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/test.py took 0.634 seconds

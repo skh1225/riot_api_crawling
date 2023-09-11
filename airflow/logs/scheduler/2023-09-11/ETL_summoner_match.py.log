@@ -1,0 +1,21 @@
+[2023-09-11T13:09:47.783+0000] {processor.py:153} INFO - Started process (PID=24957) to work on /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:09:47.784+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ETL_summoner_match.py for tasks to queue
+[2023-09-11T13:09:47.784+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:09:47.784+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:09:48.217+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ETL_summoner_match-v7']) retrieved from /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:09:48.254+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:09:48.254+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-09-11T13:09:48.267+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:09:48.267+0000] {dag.py:3444} INFO - Setting next_dagrun for ETL_summoner_match-v7 to 2023-09-20T00:00:00+00:00, run_after=2023-09-21T00:00:00+00:00
+[2023-09-11T13:09:48.280+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ETL_summoner_match.py took 0.501 seconds
+[2023-09-11T13:10:18.716+0000] {processor.py:153} INFO - Started process (PID=24976) to work on /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:10:18.718+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ETL_summoner_match.py for tasks to queue
+[2023-09-11T13:10:18.719+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:10:18.719+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:10:19.163+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ETL_summoner_match-v7']) retrieved from /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:10:19.182+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:10:19.182+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-09-11T13:10:19.196+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:10:19.196+0000] {dag.py:3444} INFO - Setting next_dagrun for ETL_summoner_match-v7 to 2023-09-20T00:00:00+00:00, run_after=2023-09-21T00:00:00+00:00
+[2023-09-11T13:10:19.205+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ETL_summoner_match.py took 0.494 seconds
+[2023-09-11T13:10:50.146+0000] {processor.py:153} INFO - Started process (PID=24995) to work on /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:10:50.149+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ETL_summoner_match.py for tasks to queue
+[2023-09-11T13:10:50.150+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:10:50.150+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:10:50.607+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ETL_summoner_match-v7']) retrieved from /opt/airflow/dags/ETL_summoner_match.py
+[2023-09-11T13:10:50.644+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:10:50.643+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-09-11T13:10:50.657+0000] {logging_mixin.py:137} INFO - [2023-09-11T13:10:50.657+0000] {dag.py:3444} INFO - Setting next_dagrun for ETL_summoner_match-v7 to 2023-09-20T00:00:00+00:00, run_after=2023-09-21T00:00:00+00:00
+[2023-09-11T13:10:50.668+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ETL_summoner_match.py took 0.529 seconds
