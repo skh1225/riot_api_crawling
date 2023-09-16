@@ -65,8 +65,9 @@ def create_table_if_not_exists():
     hook.create_empty_table(table_resource=resource)
 
 with DAG(
-    dag_id='ETL_summoner_match-v7',
-    start_date=datetime(2023, 9, 20),
+    dag_id='raw_to_processed_v5',
+    start_date=datetime(2023, 9, 8),
+    end_date=datetime(2023, 9, 9),
     schedule='0 0 * * *',  # 적당히 조절
     max_active_runs=1,
     catchup=False,
@@ -113,13 +114,14 @@ with DAG(
   create_table_if_not_exists = PythonOperator(
     task_id='create_table_if_not_exists',
     python_callable=create_table_if_not_exists,
-    trigger_rule='all_done'
+    trigger_rule='none_failed'
   )
+  create_cluster = DummyOperator(task_id='create_cluster')
 
-  create_cluster = DataprocCreateClusterOperator(
-    task_id='create_cluster',
-    **config.cluster_config
-  )
+  # create_cluster = DataprocCreateClusterOperator(
+  #   task_id='create_cluster',
+  #   **config.cluster_config
+  # )
 
   # delete_cluster = DataprocDeleteClusterOperator(
   #   task_id='delete_cluster',

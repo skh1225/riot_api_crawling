@@ -5,7 +5,7 @@ from config import config
 import json
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="./config/fourth-way-398009-b0ce29a3bf47.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/Users/skh/Documents/workspace/project/lol_crawler/config/fourth-way-398009-b0ce29a3bf47.json"
 
 storage_client = storage.Client()
 

@@ -8,7 +8,7 @@ schema = {
 resource = {
   "tableReference": {"projectId":"fourth-way-398009", "datasetId": "summoner_match","tableId": ""},
   "timePartitioning":{"type": "DAY", "expirationMs": "5184000000", "field": "date"},
-  "requirePartitionFilter": True
+  "requirePartitionFilter": False
   }
 
 pyspark_job = {
@@ -22,7 +22,7 @@ pyspark_job = {
       "main_python_file_uri": "gs://summoner-match/pyspark/raw_to_processed.py",
       "properties": {
         "spark.executor.cores": "2",
-        "spark.executor.memory": "6g",
+        "spark.executor.memory": "5632m",
         "spark.executor.instances": "3"
       },
       "jar_file_uris": [
@@ -71,9 +71,7 @@ cluster_config = {
         "JUPYTER"
       ]
     },
-    "lifecycle_config": {
-      "idle_delete_ttl": "1800s"
-    },
+    "lifecycle_config": {},
     "initialization_actions": [],
     "encryption_config": {
       "gce_pd_kms_key_name": ""
