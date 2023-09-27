@@ -11,7 +11,7 @@ resource = {
   "requirePartitionFilter": False
   }
 
-pyspark_job = {
+raw_to_processed = {
     "placement": {
       "cluster_name": "spark-cluster"
     },
@@ -23,14 +23,32 @@ pyspark_job = {
       "properties": {
         "spark.executor.cores": "2",
         "spark.executor.memory": "5632m",
-        "spark.executor.instances": "3"
+        "spark.executor.instances": "3",
+        "spark.jars.packages": "org.mongodb.spark:mongo-spark-connector_2.12:10.2.0",
+        "spark.mongodb.write.connection.uri": "mongodb://root:1234@146.56.167.174:27016/?retryWrites=false&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-256"
       },
-      "jar_file_uris": [
-        "gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar"
-      ],
       "args": []
     }
   }
+
+processed_to_mongodb = {
+    "placement": {
+      "cluster_name": "spark-cluster"
+    },
+    "reference": {
+      "project_id": "fourth-way-398009"
+    },
+    "pyspark_job": {
+      "main_python_file_uri": "",
+      "properties": {
+        "spark.executor.cores": "2",
+        "spark.executor.memory": "5632m",
+        "spark.executor.instances": "3"
+      },
+      "args": []
+    }
+  }
+
 
 cluster_config = {
   "project_id": "fourth-way-398009",
