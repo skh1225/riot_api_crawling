@@ -15,7 +15,7 @@ from airflow.providers.google.cloud.operators.dataproc import DataprocSubmitJobO
 
 def check_date(**context):
   if "{{ ds }}" == datetime.utcnow().strftime('%Y-%m-%d'):
-    return 'create_cluster'
+    return 'check_version'
   else:
     return 'end'
 
@@ -29,7 +29,7 @@ scripts = ['champion_counter.py','champion_synergy.py', 'champion_tier.py', 'pro
 # counter, synergy 최근 30일, champion_tier game_version,
 
 with DAG(
-    dag_id='raw_to_processed_gcs',
+    dag_id='gcs_to_mongodb',
     start_date=datetime(2023, 9, 8),
     schedule=None,
     max_active_runs=1,
@@ -46,14 +46,21 @@ with DAG(
     python_callable = check_date,
   )
 
-  create_cluster = DummyOperator(task_id='create_cluster')
-  delete_cluster =  DummyOperator(task_id='delete_cluster', trigger_rule='all_done')
+  delete_cluster = DataprocDeleteClusterOperator(
+    task_id='delete_cluster',
+    region=config.cluster_config['region'],
+    cluster_name=config.cluster_config['cluster_name'],
+    project_id=config.cluster_config['project_id'],
+    trigger_rule='none_skipped'
+  )
   check_version = PythonOperator(
     task_id='check_version',
     python_callable=check_version
   )
 
-  create_cluster >> check_version
+  end = DummyOperator(task_id='end')
+
+  check_date >> [check_version, end]
 
   for script in scripts:
     pyspark_job = config.processed_to_mongodb
@@ -73,16 +80,12 @@ with DAG(
 
     check_version >> spark_job >> delete_cluster
 
+  delete_cluster >> end
   # create_cluster = DataprocCreateClusterOperator(
   #   task_id='create_cluster',
   #   **config.cluster_config
   # )
 
-  # delete_cluster = DataprocDeleteClusterOperator(
-  #   task_id='delete_cluster',
-  #   region=config.cluster_config['region'],
-  #   cluster_name=config.cluster_config['cluster_name'],
-  #   project_id=config.cluster_config['project_id']
-  # )
+
 
 

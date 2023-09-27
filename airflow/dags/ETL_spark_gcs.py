@@ -85,12 +85,10 @@ with DAG(
     job = pyspark_job,
   )
 
-  create_cluster = DummyOperator(task_id='create_cluster')
-
-  # create_cluster = DataprocCreateClusterOperator(
-  #   task_id='create_cluster',
-  #   **config.cluster_config
-  # )
+  create_cluster = DataprocCreateClusterOperator(
+    task_id='create_cluster',
+    **config.cluster_config
+  )
 
   # delete_cluster = DataprocDeleteClusterOperator(
   #   task_id='delete_cluster',
