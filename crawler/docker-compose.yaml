@@ -1,0 +1,23 @@
+services:
+  crawler:
+    build: .
+    restart: always
+    depends_on:
+      - postgres
+    volumes:
+      - ./config:/config
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: crawler
+      POSTGRES_PASSWORD: crawler
+      POSTGRES_DB: crawler
+    restart: always
+    volumes:
+      - crawler-db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+
+volumes:
+  crawler-db:
