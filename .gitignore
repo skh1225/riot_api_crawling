@@ -1,5 +1,5 @@
-config/config.py
-./cofig/*.json
+crawler/config/config.py
+crawler/config/*.json
 *.json
 test.py
 airflow/logs/
