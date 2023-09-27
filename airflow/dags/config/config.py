@@ -25,7 +25,7 @@ raw_to_processed = {
         "spark.executor.memory": "5632m",
         "spark.executor.instances": "3",
         "spark.jars.packages": "org.mongodb.spark:mongo-spark-connector_2.12:10.2.0",
-        "spark.mongodb.write.connection.uri": "mongodb://root:1234@146.56.167.174:27016/?retryWrites=false&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-256"
+        "spark.mongodb.write.connection.uri": ""
       },
       "args": []
     }
