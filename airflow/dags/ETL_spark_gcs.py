@@ -117,14 +117,14 @@ with DAG(
     python_callable = check_date,
   )
 
-  delete_cluster = DummyOperator(task_id='delete_cluster', trigger_rule='none_skipped')
-  # DataprocDeleteClusterOperator(
-  #   task_id='delete_cluster',
-  #   region=config.cluster_config['region'],
-  #   cluster_name=config.cluster_config['cluster_name'],
-  #   project_id=config.cluster_config['project_id'],
-  #   trigger_rule='none_skipped'
-  # )
+  delete_cluster = DataprocDeleteClusterOperator(
+    task_id='delete_cluster',
+    region=config.cluster_config['region'],
+    cluster_name=config.cluster_config['cluster_name'],
+    project_id=config.cluster_config['project_id'],
+    trigger_rule='none_skipped'
+  )
+
 
   check_version = PythonOperator(
     task_id='check_version',
