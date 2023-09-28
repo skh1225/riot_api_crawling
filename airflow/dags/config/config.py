@@ -24,8 +24,6 @@ raw_to_processed = {
         "spark.executor.cores": "2",
         "spark.executor.memory": "5632m",
         "spark.executor.instances": "3",
-        "spark.jars.packages": "org.mongodb.spark:mongo-spark-connector_2.12:10.2.0",
-        "spark.mongodb.write.connection.uri": ""
       },
       "args": []
     }
@@ -43,7 +41,9 @@ processed_to_mongodb = {
       "properties": {
         "spark.executor.cores": "2",
         "spark.executor.memory": "5632m",
-        "spark.executor.instances": "3"
+        "spark.executor.instances": "3",
+        "spark.jars.packages": "org.mongodb.spark:mongo-spark-connector_2.12:10.2.0",
+        "spark.mongodb.write.connection.uri": ""
       },
       "args": []
     }

@@ -14,13 +14,15 @@ from airflow.operators.python_operator import BranchPythonOperator, PythonOperat
 from airflow.providers.google.cloud.operators.dataproc import DataprocSubmitJobOperator, DataprocCreateClusterOperator, DataprocDeleteClusterOperator
 
 def check_date(**context):
-  if "{{ ds }}" == datetime.utcnow().strftime('%Y-%m-%d'):
+  # if context['execution_date'].strftime('%Y-%m-%d') == datetime.utcnow().strftime('%Y-%m-%d'):
+  if context['execution_date'].strftime('%Y-%m-%d') == '2023-09-22':
     return 'check_version'
   else:
     return 'end'
 
 def check_version(**context):
-  game_version = '.'.join(requests.get('https://ddragon.leagueoflegends.com/api/versions.json').json()[0].split('.')[:2])
+  # game_version = '.'.join(requests.get('https://ddragon.leagueoflegends.com/api/versions.json').json()[0].split('.')[:2])
+  game_version = '13.16'
   date_30d = (datetime.utcnow() - timedelta(days=30)).strftime('%Y-%m-%d')
   context['task_instance'].xcom_push(key='game_version',value=game_version)
   context['task_instance'].xcom_push(key='start_date',value=date_30d)
@@ -63,19 +65,19 @@ with DAG(
   check_date >> [check_version, end]
 
   for script in scripts:
-    pyspark_job = config.processed_to_mongodb
+    elt_pyspark_job = config.processed_to_mongodb
     if script in ['champion_counter.py','champion_synergy.py']:
-      pyspark_job['pyspark_job']['args'].append("--execution_date={{ ti.xcom_pull(key='start_date') }}")
+      elt_pyspark_job['pyspark_job']['args'].append("--execution_date={{ ti.xcom_pull(key='start_date') }}")
     elif script == 'champion_tier.py':
-      pyspark_job['pyspark_job']['args'].append("--game_version={{ ti.xcom_pull(key='game_version') }}")
+      elt_pyspark_job['pyspark_job']['args'].append("--game_version={{ ti.xcom_pull(key='game_version') }}")
     else:
-      pyspark_job['pyspark_job']['args'].append("--execution_date={{ ds }}")
-    pyspark_job['pyspark_job']['main_python_file_uri'].append(f'gs://summoner-match/pyspark/{script}')
+      elt_pyspark_job['pyspark_job']['args'].append("--execution_date={{ ds }}")
+    elt_pyspark_job['pyspark_job']['main_python_file_uri']=f'gs://summoner-match/pyspark/{script}'
 
     spark_job = DataprocSubmitJobOperator(
       task_id = f'{script}',
       region = 'asia-northeast3',
-      job = pyspark_job,
+      job = elt_pyspark_job,
     )
 
     check_version >> spark_job >> delete_cluster
