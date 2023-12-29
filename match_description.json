@@ -1,0 +1,1200 @@
+{
+    "metadata":{
+        "description_":"match에 대한 메타 정보",
+        "type": "STRUCT",
+        "dataVersion":{
+            "description_":"matchdata Version",
+            "type":"STRING"
+        },
+        "matchId":{
+            "description_":"match에 대한 고유 식별 값",
+            "type": "STRING"
+        },
+        "participants":{
+            "description_": "참가자들의 puuid",
+            "type": "ARRAY<10>"
+        }
+    },
+    "info":{
+        "description_":"match에 대한 상세 정보",
+        "type": "STRUCT",
+        "gameStartTimestamp":{
+            "description_": "게임이 시작한 시간, 이 값을 1000으로 나누면 unix time이 된다.",
+            "type": "INT"
+        },
+        "gameCreation":{
+            "description_": "게임이 만들어진 시간, 이 값을 1000으로 나누면 unix time이 된다.",
+            "type": "INT"
+        },
+        "gameDuration":{
+            "description_": "게임이 진행된 길이, 초 단위로 표현되어 있음",
+            "type": "INT"
+        },
+        "gameEndTimestamp":{
+            "description_": "게임이 끝난 시간, 이 값을 1000으로 나누면 unix time이 된다.",
+            "type": "INT"
+        },
+        "gameId":{
+            "description_": "X",
+            "type": "STRING"
+        },
+        "gameMode":{
+            "description_": "X",
+            "type": "STRING"
+        },
+        "gameName":{
+            "description_": "X",
+            "type": "STRING"
+        },
+        "tournamentCode":{
+            "description_": "X",
+            "type": "STRING"
+        },
+        "gameType":{
+            "description_": "X",
+            "type": "STRING"
+        },
+        "gameVersion":{
+            "description_": "게임 패치버전, ex) 13.16.245.234",
+            "type": "STRING"
+        },
+        "mapId":{
+            "description_": "map type, ex) 11:소환사의 협곡, 12:칼바람 나락",
+            "type": "INT"
+        },
+        "platformId":{
+            "description_": "어떤 지역의 서버인지, ex) KR",
+            "type": "STRING"
+        },
+        "queueId":{
+            "description_": "queue type, ex) 420:솔로랭크, 440:자유랭크, 450:칼바람나락, 490:빠른대전",
+            "type": "INT"
+        },
+        "teams":{
+            "description_": "team 관련 정보",
+            "type": "ARRAY<2>",
+            "bans":{
+                "description_": "밴한 챔피언 정보",
+                "type": "ARRAY<5>",
+                "championId":{
+                    "description_": "챔피언 고유 식별자",
+                    "type": "INT"
+                },
+                "pickTurn":{
+                    "description_": "픽 순서, ex) 0~9",
+                    "type": "INT"
+                }
+            },
+            "objectives":{
+                "description_": "오브젝트 관련 정보",
+                "type": "STRUCT",
+                "baron": {
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                },
+                "champion":{
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                },
+                "dragon":{
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                },
+                "horde":{
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                },
+                "inhibitor":{
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                },
+                "riftHerald":{
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                },
+                "tower":{
+                    "description_": "오브젝트 관련 정보",
+                    "type": "STRUCT",
+                    "kills":{
+                        "description_": "처치 수",
+                        "type": "INT"
+                    },
+                    "first":{
+                        "description_": "첫 처치 여부",
+                        "type": "BOOLEAN"
+                    }
+                }
+            },
+            "teamId":{
+                "description_": "블루(100), 레드(200)",
+                "type": "INT"
+            },
+            "win":{
+                "description_": "해당 팀이 이겼는지?",
+                "type": "BOOLEAN"
+            }
+        },
+        "participants":{
+            "description_": "참가자에 대한 정보",
+            "type": "ARRAY<10>",
+            "allInPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "assistMePings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "basicPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "dangerPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "enemyMissingPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "enemyVisionPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "getBackPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "needVisionPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "onMyWayPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "pushPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "commandPings":{
+                "description_": "Ping 찍은 횟수",
+                "type": "INT"
+            },
+            "visionClearedPings":{
+                "description_": "X",
+                "type": "INT"
+            },
+            "holdPings":{
+                "description_": "X",
+                "type": "INT"
+            },
+            "baitPings":{
+                "description_": "X",
+                "type": "INT"
+            },
+            "puuid":{
+                "description_": "유저의 고유 식별자",
+                "type": "STRING"
+            },
+            "riotIdGameName":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "riotIdTagline":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "summonerId":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "participantId":{
+                "description_": "1~10",
+                "type": "INT"
+            },
+            "summonerLevel":{
+                "description_": "X",
+                "type": "INT"
+            },
+            "summonerName":{
+                "description_": "X",
+                "type": "INT"
+            },
+            "profileIcon":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "championId":{
+                "description_": "챔피언 고유 식별자",
+                "type": "INT"
+            },
+            "championName":{
+                "description_": "챔피언 이름",
+                "type": "STRING"
+            },
+            "perks":{
+                "description_": "특성 정보",
+                "type": "STRUCT",
+                "statPerks": {
+                    "description_": "스탯 특성",
+                    "type": "STRUCT",
+                    "defense":{
+                        "description_": "방어 특성",
+                        "type": "INT"
+                    },
+                    "flex":{
+                        "description_": "복합 특성",
+                        "type": "INT"
+                    },
+                    "offense":{
+                        "description_": "공격 특성",
+                        "type": "INT"
+                    }
+                },
+                "styles":{
+                    "description_": "특성 정보",
+                    "type": "ARRAY<2>",
+                    "style":{
+                        "description_": "특성에 대한 고유번호, ex)8400:정밀",
+                        "type": "INT"
+                    },
+                    "selections":{
+                        "description_": "룬 상세 정보",
+                        "type": "ARRAY<>",
+                        "perk":{
+                            "description_": "룬 상세 식별자, ex) 집중공격, 정복자...",
+                            "type": "INT"
+                        },
+                        "var1":{
+                            "description_": "?",
+                            "type": "INT"
+                        },
+                        "var2":{
+                            "description_": "?",
+                            "type": "INT"
+                        },
+                        "var3":{
+                            "description_": "?",
+                            "type": "INT"
+                        }
+                    },
+                    "description": {
+                        "description_": "주룬, 부룬의 구분 ex) primaryStyle,subStyle",
+                        "type": "String"
+                    }
+                }
+            },
+            "lane":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "role":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "individualPosition":{
+                "description_": "X",
+                "type": "STRING"
+            },
+            "teamPosition":{
+                "description_": "챔피언 포지션, ex) TOP, MID...",
+                "type": "STRING"
+            },
+            "championTransform":{
+                "description_": "케인의 변신 폼에 대한 정보, ex)Legal values: 0 - None, 1 - Slayer, 2 - Assassin",
+                "type": "INT"
+            },
+            "champLevel":{
+                "description_": "챔피언 레벨",
+                "type": "INT"
+            },
+            "champExperience":{
+                "description_": "경험치 획득량",
+                "type": "INT"
+            },
+            "kills":{
+                "description_": "킬 수",
+                "type": "INT"
+            },
+            "assists":{
+                "description_": "어시스트 수",
+                "type": "INT"
+            },
+            "deaths":{
+                "description_": "데스 수",
+                "type": "INT"
+            },
+            "firstBloodKill":{
+                "description_": "최초 킬 여부",
+                "type": "BOOLEAN"
+            },
+            "firstBloodAssist":{
+                "description_": "최초 어시스트 여부",
+                "type": "BOOLEAN"
+            },
+            "killingSprees":{
+                "description_": "게임이 끝났을때 연속킬의 수",
+                "type": "INT"
+            },
+            "largestKillingSpree":{
+                "description_": "게임중 최대 연속킬",
+                "type": "INT"
+            },
+            "largestMultiKill":{
+                "description_": "최대 멀티킬 수",
+                "type": "INT"
+            },
+            "doubleKills":{
+                "description_": "더블킬 수",
+                "type": "INT"
+            },
+            "tripleKills":{
+                "description_": "트리플킬 수",
+                "type": "INT"
+            },
+            "quadraKills":{
+                "description_": "쿼드라킬 수",
+                "type": "INT"
+            },
+            "pentaKills":{
+                "description_": "펜타킬 수",
+                "type": "INT"
+            },
+            "unrealKills":{
+                "description_": "?",
+                "type": "INT"
+            },
+            "bountyLevel":{
+                "description_": "현상금 레벨",
+                "type": "INT"
+            },
+            "goldEarned":{
+                "description_": "골드 획득량",
+                "type": "INT"
+            },
+            "goldSpent":{
+                "description_": "골드 소비량",
+                "type": "INT"
+            },
+            "consumablesPurchased":{
+                "description_": "소비 아이템 구매 수",
+                "type": "INT"
+            },
+            "itemsPurchased":{
+                "description_": "아이템 구매 수",
+                "type": "INT"
+            },
+            "item0":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "item1":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "item2":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "item3":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "item4":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "item5":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "item6":{
+                "description_": "x번째 slot의 item 식별자",
+                "type": "INT"
+            },
+            "damageDealtToTurrets":{
+                "description_": "포탑에 가한 피해량",
+                "type": "INT"
+            },
+            "damageDealtToBuildings":{
+                "description_": "건물에 가한 피해량",
+                "type": "INT"
+            },
+            "firstTowerAssist":{
+                "description_": "첫 타워 어시스트 여부",
+                "type": "BOOLEAN"
+            },
+            "firstTowerKill":{
+                "description_": "첫 타워 파괴 여부",
+                "type": "BOOLEAN"
+            },
+            "inhibitorKills":{
+                "description_": "내가 파괴한 억제기의 수",
+                "type": "INT"
+            },
+            "inhibitorTakedowns":{
+                "description_": "파괴한 억제기의 수",
+                "type": "INT"
+            },
+            "inhibitorsLost":{
+                "description_": "파괴된 억제기의 수",
+                "type": "INT"
+            },
+            "nexusKills":{
+                "description_": "내가 파괴한 넥서스 수",
+                "type": "INT"
+            },
+            "nexusLost":{
+                "description_": "파괴된 넥서스 수",
+                "type": "INT"
+            },
+            "nexusTakedowns":{
+                "description_": "팀이 파괴한 넥서스 수",
+                "type": "INT"
+            },
+            "turretKills":{
+                "description_": "내가 파괴한 터렛 수",
+                "type": "INT"
+            },
+            "turretTakedowns":{
+                "description_": "팀이 파괴한 터렛 수",
+                "type": "INT"
+            },
+            "turretsLost":{
+                "description_": "파괴된 터렛 수",
+                "type": "INT"
+            },
+            "dragonKills":{
+                "description_": "내가 처치한 드래곤 수",
+                "type": "INT"
+            },
+            "baronKills":{
+                "description_": "내가 처치한 드래곤 수",
+                "type": "INT"
+            },
+            "damageDealtToObjectives":{
+                "description_": "",
+                "type": "INT"
+            },
+            "objectivesStolen":{
+                "description_": "",
+                "type": "INT"
+            },
+            "objectivesStolenAssists":{
+                "description_": "",
+                "type": "INT"
+            },
+            "visionScore":{
+                "description_": "",
+                "type": "INT"
+            },
+            "visionWardsBoughtInGame":{
+                "description_": "",
+                "type": "INT"
+            },
+            "wardsKilled":{
+                "description_": "",
+                "type": "INT"
+            },
+            "wardsPlaced":{
+                "description_": "",
+                "type": "INT"
+            },
+            "detectorWardsPlaced":{
+                "description_": "",
+                "type": "INT"
+            },
+            "sightWardsBoughtInGame":{
+                "description_": "",
+                "type": "INT"
+            },
+            "teamId":{
+                "description_": "",
+                "type": "INT"
+            },
+            "teamEarlySurrendered":{
+                "description_": "",
+                "type": "BOOLEAN"
+            },
+            "gameEndedInEarlySurrender":{
+                "description_": "",
+                "type": "BOOLEAN"
+            },
+            "gameEndedInSurrender":{
+                "description_": "",
+                "type": "BOOLEAN"
+            },
+            "win":{
+                "description_": "",
+                "type": "BOOLEAN"
+            },
+            "physicalDamageDealt":{
+                "description_": "",
+                "type": "INT"
+            },
+            "physicalDamageDealtToChampions":{
+                "description_": "",
+                "type": "INT"
+            },
+            "physicalDamageTaken":{
+                "description_": "",
+                "type": "INT"
+            },
+            "magicDamageDealt":{
+                "description_": "",
+                "type": "INT"
+            },
+            "magicDamageDealtToChampions":{
+                "description_": "",
+                "type": "INT"
+            },
+            "magicDamageTaken":{
+                "description_": "",
+                "type": "INT"
+            },
+            "TrueDamageDealt":{
+                "description_": "",
+                "type": "INT"
+            },
+            "TrueDamageDealtToChampions":{
+                "description_": "",
+                "type": "INT"
+            },
+            "TrueDamageTaken":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalDamageDealt":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalDamageDealtToChampions":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalDamageTaken":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalDamageShieldedOnTeammates":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalHeal":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalHealsOnTeammates":{
+                "description_": "",
+                "type": "INT"
+            },
+            "neutralMinionsKilled":{
+                "description_": "정글 몬스터 처치 수, 바위게 포함",
+                "type": "INT"
+            },
+            "totalAllyJungleMinionsKilled":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalEnemyJungleMinionsKilled":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalMinionsKilled":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalTimeCCDealt":{
+                "description_": "X",
+                "type": "INT"
+            },
+            "totalTimeSpentDead":{
+                "description_": "",
+                "type": "INT"
+            },
+            "totalUnitsHealed":{
+                "description_": "",
+                "type": "INT"
+            },
+            "timeCCingOthers":{
+                "description_": "cc 시간",
+                "type": "INT"
+            },
+            "longestTimeSpentLiving":{
+                "description_": "",
+                "type": "INT"
+            },
+            "timePlayed":{
+                "description_": "",
+                "type": "INT"
+            },
+            "spell1Casts":{
+                "description_": "q 사용 횟수",
+                "type": "INT"
+            },
+            "spell2Casts":{
+                "description_": "W 사용 횟수",
+                "type": "INT"
+            },
+            "spell3Casts":{
+                "description_": "e 사용 횟수",
+                "type": "INT"
+            },
+            "spell4Casts":{
+                "description_": "r 사용 횟수",
+                "type": "INT"
+            },
+            "summoner1Casts":{
+                "description_": "d 사용 횟수",
+                "type": "INT"
+            },
+            "summoner1Id":{
+                "description_": "d 스펠 식별자",
+                "type": "INT"
+            },
+            "summoner2Casts":{
+                "description_": "f 사용 횟수",
+                "type": "INT"
+            },
+            "summoner2Id":{
+                "description_": "f 스펠 식별자",
+                "type": "INT"
+            },
+            "damageSelfMitigated":{
+                "description_": "쉴드, block 등으로 감소된 피해량",
+                "type": "INT"
+            },
+            "largestCriticalStrike":{
+                "description_": "최대 치명타 데미지",
+                "type": "INT"
+            },
+            "playerScore0~11":{
+                "description_": "X",
+                "type": ""
+            },
+            "playerAugment1~4":{
+                "description_": "X",
+                "type": ""
+            },
+            "playerSubteamId":{
+                "description_": "X",
+                "type": ""
+            },
+            "subteamPlacement":{
+                "description_": "X",
+                "type": ""
+            },
+            "eligibleForProgression":{
+                "description_": "X",
+                "type": ""
+            },
+            "placement":{
+                "description_": "X",
+                "type": ""
+            },
+            "missions":{
+                "description_": "X",
+                "type": ""
+            },
+            "challenges":{
+                "description_": "",
+                "type": "STRUCT",
+                "controlWardTimeCoverageInRiverOrEnemyHalf":{
+                    "description_": "제어와드가 강가, 상대진영에 설치되어 있는 시간의 비율",
+                    "type": "FLOAT"
+                },
+                "damagePerMinute":{
+                    "description_": "dpm",
+                    "type": "FLOAT"
+                },
+                "damageTakenOnTeamPercentage":{
+                    "description_": "dpm",
+                    "type": "FLOAT"
+                },
+                "enemyChampionImmobilizations":{
+                    "description_": "적을 이동 불가 상태로 만든 횟수",
+                    "type": "INT"
+                },
+                "goldPerMinute":{
+                    "description_": "gpm",
+                    "type": "FLOAT"
+                },
+                "immobilizeAndKillWithAlly":{
+                    "description_": "적을 이동 불가 상태로 만들고 아군과 함께 처치한 횟수",
+                    "type": "INT"
+                },
+                "initialBuffCount":{
+                    "description_": "첫 버프 처치 수(레드,블루)",
+                    "type": "INT"
+                },
+                "initialCrabCount":{
+                    "description_": "첫 바위게 처치 수",
+                    "type": "INT"
+                },
+                "saveAllyFromDeath":{
+                    "description_": "아군을 살린 횟수",
+                    "type": "INT"
+                },
+                "skillshotsDodged":{
+                    "description_": "논타켓 스킬을 피한 횟수, 어떤 조건이 있는 듯",
+                    "type": "INT"
+                },
+                "skillshotsHit":{
+                    "description_": "논타켓 스킬을 맞춘 횟수, (7분이전?)",
+                    "type": "INT"
+                },
+                "soloKills":{
+                    "description_": "솔로킬 횟수",
+                    "type": "INT"
+                },
+                "teamDamagePercentage":{
+                    "description_": "팀내 데미지 비중",
+                    "type": "FLOAT"
+                },
+                "visionScorePerMinute":{
+                    "description_": "분당 시야 점수",
+                    "type": "FLOAT"
+                },
+                "wardTakedowns":{
+                    "description_": "와드 처치 횟수",
+                    "type": "INT"
+                },
+                "12AssistStreakCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "abilityUses":{
+                    "description_":"X",
+                    "type":""
+                },
+                "acesBefore15Minutes":{
+                    "description_":"X",
+                    "type":""
+                },
+                "alliedJungleMonsterKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "baronTakedowns":{
+                    "description_":"X",
+                    "type":""
+                },
+                "blastConeOppositeOpponentCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "bountyGold":{
+                    "description_":"X",
+                    "type":""
+                },
+                "buffsStolen":{
+                    "description_":"X",
+                    "type":""
+                },
+                "dancedWithRiftHerald":{
+                    "description_":"X",
+                    "type":""
+                },
+                "deathsByEnemyChamps":{
+                    "description_":"X",
+                    "type":""
+                },
+                "doubleAces":{
+                    "description_":"X",
+                    "type":""
+                },
+                "dragonTakedowns":{
+                    "description_":"X",
+                    "type":""
+                },
+                "elderDragonKillsWithOpposingSoul":{
+                    "description_":"X",
+                    "type":""
+                },
+                "elderDragonMultikills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "enemyJungleMonsterKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "controlWardsPlaced : detectorWardsPlaced 와 동일":{
+                    "description_":"X",
+                    "type":""
+                },
+                "dodgeSkillShotsSmallWindow":{
+                    "description_":"X",
+                    "type":""
+                },
+                "epicMonsterKillsNearEnemyJungler":{
+                    "description_":"X",
+                    "type":""
+                },
+                "epicMonsterKillsWithin30SecondsOfSpawn":{
+                    "description_":"X",
+                    "type":""
+                },
+                "epicMonsterSteals":{
+                    "description_":"X",
+                    "type":""
+                },
+                "epicMonsterStolenWithoutSmite":{
+                    "description_":"X",
+                    "type":""
+                },
+                "firstTurretKilled":{
+                    "description_":"X",
+                    "type":""
+                },
+                "flawlessAces":{
+                    "description_":"X",
+                    "type":""
+                },
+                "fullTeamTakedown":{
+                    "description_":"X",
+                    "type":""
+                },
+                "gameLength : gameDuration과 중복":{
+                    "description_":"X",
+                    "type":""
+                },
+                "hadOpenNexus":{
+                    "description_":"X",
+                    "type":""
+                },
+                "jungleCsBefore10Minutes":{
+                    "description_":"X",
+                    "type":""
+                },
+                "junglerTakedownsNearDamagedEpicMonster":{
+                    "description_":"X",
+                    "type":""
+                },
+                "getTakedownsInAllLanesEarlyJungleAsLaner":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killAfterHiddenWithAlly":{
+                    "description_":"X",
+                    "type":""
+                },
+                "kda":{
+                    "description_":"X",
+                    "type":""
+                },
+                "kTurretsDestroyedBeforePlatesFall":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killParticipation":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killedChampTookFullTeamDamageSurvived":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killingSprees":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killsNearEnemyTurret":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killsOnOtherLanesEarlyJungleAsLaner":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killsOnRecentlyHealedByAramPack":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killsUnderOwnTurret":{
+                    "description_":"X",
+                    "type":""
+                },
+                "killsWithHelpFromEpicMonster":{
+                    "description_":"X",
+                    "type":""
+                },
+                "knockEnemyIntoTeamAndKill":{
+                    "description_":"X",
+                    "type":""
+                },
+                "landSkillShotsEarlyGame":{
+                    "description_":"X",
+                    "type":""
+                },
+                "laneMinionsFirst10Minutes":{
+                    "description_":"X",
+                    "type":""
+                },
+                "legendaryCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "lostAnInhibitor":{
+                    "description_":"X",
+                    "type":""
+                },
+                "laningPhaseGoldExpAdvantage":{
+                    "description_":"X",
+                    "type":""
+                },
+                "maxCsAdvantageOnLaneOpponent":{
+                    "description_":"X",
+                    "type":""
+                },
+                "maxKillDeficit":{
+                    "description_":"X",
+                    "type":""
+                },
+                "maxLevelLeadLaneOpponent":{
+                    "description_":"X",
+                    "type":""
+                },
+                "mejaisFullStackInTime":{
+                    "description_":"X",
+                    "type":""
+                },
+                "moreEnemyJungleThanOpponent":{
+                    "description_":"X",
+                    "type":""
+                },
+                "multiKillOneSpell":{
+                    "description_":"X",
+                    "type":""
+                },
+                "multiTurretRiftHeraldCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "multikills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "multikillsAfterAggressiveFlash":{
+                    "description_":"X",
+                    "type":""
+                },
+                "outerTurretExecutesBefore10Minutes":{
+                    "description_":"X",
+                    "type":""
+                },
+                "outnumberedKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "outnumberedNexusKill":{
+                    "description_":"X",
+                    "type":""
+                },
+                "perfectDragonSoulsTaken":{
+                    "description_":"X",
+                    "type":""
+                },
+                "perfectGame":{
+                    "description_":"X",
+                    "type":""
+                },
+                "pickKillWithAlly":{
+                    "description_":"X",
+                    "type":""
+                },
+                "playedChampSelectPosition":{
+                    "description_":"X",
+                    "type":""
+                },
+                "poroExplosions":{
+                    "description_":"X",
+                    "type":""
+                },
+                "quickCleanse":{
+                    "description_":"X",
+                    "type":""
+                },
+                "quickFirstTurret":{
+                    "description_":"X",
+                    "type":""
+                },
+                "quickSoloKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "riftHeraldTakedowns":{
+                    "description_":"X",
+                    "type":""
+                },
+                "earlyLaningPhaseGoldExpAdvantage":{
+                    "description_":"X",
+                    "type":""
+                },
+                "effectiveHealAndShielding":{
+                    "description_":"X",
+                    "type":""
+                },
+                "snowballsHit":{
+                    "description_":"X",
+                    "type":""
+                },
+                "soloBaronKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "scuttleCrabKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "stealthWardsPlaced":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedownsInEnemyFountain":{
+                    "description_":"X",
+                    "type":""
+                },
+                "teamBaronKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "survivedSingleDigitHpCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "survivedThreeImmobilizesInFight":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedownOnFirstTurret":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedowns":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedownsAfterGainingLevelAdvantage":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedownsBeforeJungleMinionSpawn":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedownsFirstXMinutes":{
+                    "description_":"X",
+                    "type":""
+                },
+                "takedownsInAlcove":{
+                    "description_":"X",
+                    "type":""
+                },
+                "teamElderDragonKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "teamRiftHeraldKills":{
+                    "description_":"X",
+                    "type":""
+                },
+                "tookLargeDamageSurvived":{
+                    "description_":"X",
+                    "type":""
+                },
+                "turretPlatesTaken":{
+                    "description_":"X",
+                    "type":""
+                },
+                "turretTakedowns":{
+                    "description_":"X",
+                    "type":""
+                },
+                "turretsTakenWithRiftHerald":{
+                    "description_":"X",
+                    "type":""
+                },
+                "twentyMinionsIn3SecondsCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "twoWardsOneSweeperCount":{
+                    "description_":"X",
+                    "type":""
+                },
+                "unseenRecalls":{
+                    "description_":"X",
+                    "type":""
+                },
+                "visionScoreAdvantageLaneOpponent":{
+                    "description_":"X",
+                    "type":""
+                },
+                "wardTakedownsBefore20M":{
+                    "description_":"X",
+                    "type":""
+                },
+                "wardsGuarded":{
+                    "description_":"X",
+                    "type":""
+                },
+                "completeSupportQuestInTime":{
+                    "description_":"X",
+                    "type":""
+                }
+            }
+
+        }
+    }
+
+}

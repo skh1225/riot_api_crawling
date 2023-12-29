@@ -1,0 +1,260 @@
+{
+    "metadata":{
+        "description_":"match에 대한 메타 정보",
+        "type": "STRUCT",
+        "dataVersion":{
+            "description_":"matchdata Version",
+            "type":"STRING"
+        },
+        "matchId":{
+            "description_":"match에 대한 고유 식별 값",
+            "type": "STRING"
+        },
+        "participants":{
+            "description_": "참가자들의 puuid",
+            "type": "ARRAY<10>"
+        }
+    },
+    "info":{
+        "description_":"match에 대한 상세 정보",
+        "type": "STRUCT",
+        "frames":{
+            "description_":"1분 간격의 timeline 정보",
+            "type":"ARRAY<>",
+            "events":{
+                "description_":[
+                    "해당 frame에 발생한 Event",
+                    "ITEM_UNDO:아이템 되돌리기",
+                    "BUILDING_KILL:건물 파괴",
+                    "SKILL_LEVEL_UP:스킬 레벨업",
+                    "WARD_PLACED:와드 설치",
+                    "LEVEL_UP:레벨업",
+                    "DRAGON_SOUL_GIVEN:원소드래곤 획득",
+                    "GAME_END:게임 끝",
+                    "ELITE_MONSTER_KILL:드래곤,전령,바론 처치",
+                    "ITEM_SOLD:아이템 판매",
+                    "ITEM_PURCHASED:아이템 구매",
+                    "CHAMPION_SPECIAL_KILL:퍼블, 멀티킬 등등..",
+                    "WARD_KILL:와드 처치",
+                    "CHAMPION_KILL: 챔피언 처치",
+                    "ITEM_DESTROYED:ex)망가진 초시계",
+                    "TURRET_PLATE_DESTROYED:포탑 방패 파괴",
+                    "PAUSE_END:게임 재개, 게임이 시작할때 뜸"
+                ],
+                "type":"ARRAY<>"
+            },
+            "participantFrames":{
+                "description_":"해당 frame의 각 Participant의 스냅샷",
+                "type": "STRUCT",
+                "championStats":{
+                    "description_":"챔피언 세부 스탯",
+                    "type":"",
+                    "abilityHaste":{
+                        "description_":"",
+                        "type":""
+                    },
+                    "abilityPower":{
+                        "description_":"주문력",
+                        "type":""
+                    },
+                    "armor":{
+                        "description_":"방어력",
+                        "type":""
+                    },
+                    "armorPen":{
+                        "description_":"방어력 관통(고정)",
+                        "type":""
+                    },
+                    "armorPenPercent":{
+                        "description_":"방여력 관통(%)",
+                        "type":""
+                    },
+                    "attackDamage":{
+                        "description_":"공격력",
+                        "type":""
+                    },
+                    "attackSpeed":{
+                        "description_":"공격 속도",
+                        "type":""
+                    },
+                    "bonusArmorPenPercent":{
+                        "description_":"?",
+                        "type":""
+                    },
+                    "bonusMagicPenPercent":{
+                        "description_":"?",
+                        "type":""
+                    },
+                    "ccReduction":{
+                        "description_":"강인함",
+                        "type":""
+                    },
+                    "cooldownReduction":{
+                        "description_":"?",
+                        "type":""
+                    },
+                    "health":{
+                        "description_":"현제 체력",
+                        "type":""
+                    },
+                    "healthMax":{
+                        "description_":"최대 체력",
+                        "type":""
+                    },
+                    "healthRegen":{
+                        "description_":"체력 재생력",
+                        "type":""
+                    },
+                    "lifesteal":{
+                        "description_":"",
+                        "type":""
+                    },
+                    "magicPen":{
+                        "description_":"마법 관통력(고정)",
+                        "type":""
+                    },
+                    "magicPenPercent":{
+                        "description_":"마법 관통력(%)",
+                        "type":""
+                    },
+                    "magicResist":{
+                        "description_":"마법 저항력",
+                        "type":""
+                    },
+                    "movementSpeed":{
+                        "description_":"이동속도",
+                        "type":""
+                    },
+                    "omnivamp":{
+                        "description_":"모든 피해 흡혈",
+                        "type":""
+                    },
+                    "physicalVamp":{
+                        "description_":"생명력 흡수",
+                        "type":""
+                    },
+                    "power":{
+                        "description_":"현제 마나/기력",
+                        "type":""
+                    },
+                    "powerMax":{
+                        "description_":"최대 마나/기력",
+                        "type":""
+                    },
+                    "powerRegen":{
+                        "description_":"마나/기력 재생력",
+                        "type":""
+                    },
+                    "spellVamp":{
+                        "description_":"주문 흡혈",
+                        "type":""
+                    }
+                },
+                "currentGold":{
+                    "description_":"골드 현재 보유량",
+                    "type":""
+                },
+                "damageStats":{
+                    "description_":"데미지 관련 누적량",
+                    "type":"",
+                    "magicDamageDone":{
+                        "description_":"누적 마법 데미지",
+                        "type":""
+                    },
+                    "magicDamageDoneToChampions":{
+                        "description_":"챔피언에게 가한 누적 마법 데미지",
+                        "type":""
+                    },
+                    "magicDamageTaken":{
+                        "description_":"누적 마법 피해",
+                        "type":""
+                    },
+                    "physicalDamageDone":{
+                        "description_":"누적 물리 데미지",
+                        "type":""
+                    },
+                    "physicalDamageDoneToChampions":{
+                        "description_":"챔피언에게 가한 누적 물리 데미지",
+                        "type":""
+                    },
+                    "physicalDamageTaken":{
+                        "description_":"누적 물리 피해",
+                        "type":""
+                    },
+                    "totalDamageDone":{
+                        "description_":"누적 데미지",
+                        "type":""
+                    },
+                    "totalDamageDoneToChampions":{
+                        "description_":"챔피언에게 가한 누적 데미지",
+                        "type":""
+                    },
+                    "totalDamageTaken":{
+                        "description_":"누적 피해",
+                        "type":""
+                    },
+                    "trueDamageDone":{
+                        "description_":"누적 고정 데미지",
+                        "type":""
+                    },
+                    "trueDamageDoneToChampions":{
+                        "description_":"챔피언에게 가한 누적 고정 데미지",
+                        "type":""
+                    },
+                    "trueDamageTaken":{
+                        "description_":"누적 고정 피해",
+                        "type":""
+                    }
+                },
+                "goldPerSecond":{
+                    "description_":"? 모든 값이 0임",
+                    "type":""
+                },
+                "jungleMinionsKilled":{
+                    "description_":"누적 정글 미니언 처치",
+                    "type":""
+                },
+                "level":{
+                    "description_":"레벨",
+                    "type":""
+                },
+                "minionsKilled":{
+                    "description_":"누적 미니언 킬",
+                    "type":""
+                },
+                "participantId":{
+                    "description_":"1~10 범위를 가지는 참가자 번호",
+                    "type":""
+                },
+                "position":{
+                    "description_":"xy좌표",
+                    "type":""
+                },
+                "timeEnemySpentControlled":{
+                    "description_":"?",
+                    "type":""
+                },
+                "totalGold":{
+                    "description_":"누적 골드 획득량",
+                    "type":""
+                },
+                "xp":{
+                    "description_":"누적 경험치 획득량",
+                    "type":""
+                },
+            }
+        },
+        "gameId":{
+            "description_":"X",
+            "type":""
+        },
+        "frameInterval":{
+            "description_":"X",
+            "type":""
+        },
+        "participants":{
+            "description_":"X",
+            "type":""
+        }
+    }
+}

@@ -16,10 +16,10 @@ raw_to_processed = {
       "cluster_name": "spark-cluster"
     },
     "reference": {
-      "project_id": "fourth-way-398009"
+      "project_id": "gnimty-397509"
     },
     "pyspark_job": {
-      "main_python_file_uri": "gs://summoner-match/pyspark/raw_to_processed.py",
+      "main_python_file_uri": "",
       "properties": {
         "spark.executor.cores": "2",
         "spark.executor.memory": "5632m",
@@ -34,7 +34,7 @@ processed_to_mongodb = {
       "cluster_name": "spark-cluster"
     },
     "reference": {
-      "project_id": "fourth-way-398009"
+      "project_id": "gnimty-397509"
     },
     "pyspark_job": {
       "main_python_file_uri": "",
@@ -51,12 +51,12 @@ processed_to_mongodb = {
 
 
 cluster_config = {
-  "project_id": "fourth-way-398009",
+  "project_id": "gnimty-397509",
   "cluster_name": "spark-cluster",
   "region": "asia-northeast3",
   "use_if_exists": True,
   "cluster_config": {
-    "config_bucket": "summoner-match",
+    "config_bucket": "gnimty_bucket",
     "gce_cluster_config": {
       "network_uri": "default",
       "subnetwork_uri": "",

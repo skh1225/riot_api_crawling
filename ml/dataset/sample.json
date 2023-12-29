@@ -1,0 +1,662 @@
+{
+  "metadata": { "matchId": "KR_6627270486", "tier": "DIAMOND" },
+  "info": {
+    "gameCreation": 1690883565293,
+    "gameDuration": 1708,
+    "gameVersion": "13.14.522.7601",
+    "participants": [
+      {
+        "assists": 3,
+        "champExperience": 12382,
+        "championId": 23,
+        "damageDealtToBuildings": 2482,
+        "damageDealtToObjectives": 3553,
+        "deaths": 7,
+        "detectorWardsPlaced": 1,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 9990,
+        "kills": 4,
+        "magicDamageDealtToChampions": 296,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8008, "var1": 26, "var2": 2, "var3": 0 },
+                { "perk": 9111, "var1": 460, "var2": 140, "var3": 0 },
+                { "perk": 9105, "var1": 17, "var2": 40, "var3": 0 },
+                { "perk": 8299, "var1": 926, "var2": 0, "var3": 0 }
+              ],
+              "style": 8000
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8304, "var1": 9, "var2": 4, "var3": 5 },
+                { "perk": 8410, "var1": 45, "var2": 0, "var3": 0 }
+              ],
+              "style": 8300
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 13713,
+        "summoner1Id": 4,
+        "summoner2Id": 14,
+        "teamId": 100,
+        "teamPosition": "TOP",
+        "timeCCingOthers": 10,
+        "totalDamageTaken": 31639,
+        "totalHeal": 11978,
+        "totalHealsOnTeammates": 0,
+        "totalMinionsKilled": 173,
+        "trueDamageDealtToChampions": 790,
+        "visionScore": 20,
+        "wardsKilled": 4,
+        "wardsPlaced": 6,
+        "win": false,
+        "damageTakenOnTeamPercentage": 0.2635332386407634,
+        "teamDamagePercentage": 0.2635332386407634,
+        "skillTree": [3, 1, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2],
+        "itemStart": ["1036", "2031", "3340"],
+        "itemRarity": ["3153", "6671"],
+        "itemBoots": "3006",
+        "itemMyth": "6671"
+      },
+      {
+        "assists": 6,
+        "champExperience": 12652,
+        "championId": 76,
+        "damageDealtToBuildings": 0,
+        "damageDealtToObjectives": 13602,
+        "deaths": 4,
+        "detectorWardsPlaced": 3,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 13238,
+        "kills": 12,
+        "magicDamageDealtToChampions": 21930,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8128, "var1": 1412, "var2": 17, "var3": 0 },
+                { "perk": 8143, "var1": 668, "var2": 0, "var3": 0 },
+                { "perk": 8138, "var1": 30, "var2": 0, "var3": 0 },
+                { "perk": 8135, "var1": 450, "var2": 5, "var3": 0 }
+              ],
+              "style": 8100
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8347, "var1": 0, "var2": 0, "var3": 0 },
+                { "perk": 8304, "var1": 9, "var2": 4, "var3": 5 }
+              ],
+              "style": 8300
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 1016,
+        "summoner1Id": 4,
+        "summoner2Id": 11,
+        "teamId": 100,
+        "teamPosition": "JUNGLE",
+        "timeCCingOthers": 7,
+        "totalDamageTaken": 27239,
+        "totalHeal": 17031,
+        "totalHealsOnTeammates": 2705,
+        "totalMinionsKilled": 27,
+        "trueDamageDealtToChampions": 1055,
+        "visionScore": 43,
+        "wardsKilled": 9,
+        "wardsPlaced": 12,
+        "win": false,
+        "damageTakenOnTeamPercentage": 0.22688122095110852,
+        "teamDamagePercentage": 0.22688122095110852,
+        "skillTree": [1, 2, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2],
+        "itemStart": ["1102", "2003", "3340"],
+        "itemRarity": ["4636", "4645", "3157"],
+        "itemBoots": "3020",
+        "itemMyth": "4636"
+      },
+      {
+        "assists": 8,
+        "champExperience": 13323,
+        "championId": 238,
+        "damageDealtToBuildings": 352,
+        "damageDealtToObjectives": 2347,
+        "deaths": 7,
+        "detectorWardsPlaced": 0,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 11028,
+        "kills": 3,
+        "magicDamageDealtToChampions": 1035,
+        "perks": {
+          "statPerks": { "defense": 5003, "flex": 5008, "offense": 5008 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8369, "var1": 581, "var2": 642, "var3": 0 },
+                { "perk": 8304, "var1": 9, "var2": 4, "var3": 5 },
+                { "perk": 8321, "var1": 9, "var2": 0, "var3": 0 },
+                { "perk": 8347, "var1": 0, "var2": 0, "var3": 0 }
+              ],
+              "style": 8300
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8210, "var1": 4, "var2": 0, "var3": 0 },
+                { "perk": 8237, "var1": 544, "var2": 0, "var3": 0 }
+              ],
+              "style": 8200
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 12584,
+        "summoner1Id": 12,
+        "summoner2Id": 4,
+        "teamId": 100,
+        "teamPosition": "MIDDLE",
+        "timeCCingOthers": 7,
+        "totalDamageTaken": 22625,
+        "totalHeal": 4452,
+        "totalHealsOnTeammates": 0,
+        "totalMinionsKilled": 215,
+        "trueDamageDealtToChampions": 528,
+        "visionScore": 18,
+        "wardsKilled": 6,
+        "wardsPlaced": 4,
+        "win": false,
+        "damageTakenOnTeamPercentage": 0.18845454724106378,
+        "teamDamagePercentage": 0.18845454724106378,
+        "skillTree": [1, 2, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2],
+        "itemStart": ["1036", "2003", "2003", "2003"],
+        "itemRarity": ["3074", "3071", "6691"],
+        "itemBoots": "3158",
+        "itemMyth": "6691"
+      },
+      {
+        "assists": 3,
+        "champExperience": 11608,
+        "championId": 498,
+        "damageDealtToBuildings": 2147,
+        "damageDealtToObjectives": 2147,
+        "deaths": 4,
+        "detectorWardsPlaced": 0,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 10111,
+        "kills": 3,
+        "magicDamageDealtToChampions": 33,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8008, "var1": 42, "var2": 4, "var3": 0 },
+                { "perk": 8009, "var1": 999, "var2": 0, "var3": 0 },
+                { "perk": 9103, "var1": 0, "var2": 0, "var3": 0 },
+                { "perk": 8017, "var1": 448, "var2": 0, "var3": 0 }
+              ],
+              "style": 8000
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8304, "var1": 10, "var2": 3, "var3": 0 },
+                { "perk": 8345, "var1": 3, "var2": 0, "var3": 0 }
+              ],
+              "style": 8300
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 14728,
+        "summoner1Id": 7,
+        "summoner2Id": 4,
+        "teamId": 100,
+        "teamPosition": "BOTTOM",
+        "timeCCingOthers": 13,
+        "totalDamageTaken": 19464,
+        "totalHeal": 5095,
+        "totalHealsOnTeammates": 797,
+        "totalMinionsKilled": 199,
+        "trueDamageDealtToChampions": 165,
+        "visionScore": 14,
+        "wardsKilled": 4,
+        "wardsPlaced": 9,
+        "win": false,
+        "damageTakenOnTeamPercentage": 0.16212658676102606,
+        "teamDamagePercentage": 0.16212658676102606,
+        "skillTree": [1, 3, 2, 3, 3, 4, 3, 2, 3, 2, 4, 2, 2, 1],
+        "itemStart": ["1055", "2003"],
+        "itemRarity": ["6672", "6675"],
+        "itemBoots": "3006",
+        "itemMyth": "6675"
+      },
+      {
+        "assists": 4,
+        "champExperience": 9279,
+        "championId": 432,
+        "damageDealtToBuildings": 280,
+        "damageDealtToObjectives": 5153,
+        "deaths": 6,
+        "detectorWardsPlaced": 6,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 5777,
+        "kills": 0,
+        "magicDamageDealtToChampions": 2684,
+        "perks": {
+          "statPerks": { "defense": 5003, "flex": 5002, "offense": 5008 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8021, "var1": 628, "var2": 403, "var3": 0 },
+                { "perk": 9111, "var1": 52, "var2": 80, "var3": 0 },
+                { "perk": 9104, "var1": 0, "var2": 0, "var3": 0 },
+                { "perk": 8299, "var1": 141, "var2": 0, "var3": 0 }
+              ],
+              "style": 8000
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8126, "var1": 111, "var2": 0, "var3": 0 },
+                { "perk": 8105, "var1": 8, "var2": 3, "var3": 0 }
+              ],
+              "style": 8100
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 1219,
+        "summoner1Id": 14,
+        "summoner2Id": 4,
+        "teamId": 100,
+        "teamPosition": "UTILITY",
+        "timeCCingOthers": 23,
+        "totalDamageTaken": 19090,
+        "totalHeal": 3727,
+        "totalHealsOnTeammates": 1035,
+        "totalMinionsKilled": 31,
+        "trueDamageDealtToChampions": 473,
+        "visionScore": 63,
+        "wardsKilled": 8,
+        "wardsPlaced": 26,
+        "win": false,
+        "damageTakenOnTeamPercentage": 0.15900440640603825,
+        "teamDamagePercentage": 0.15900440640603825,
+        "skillTree": [1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2],
+        "itemStart": ["2003", "2003", "3340", "3858"],
+        "itemRarity": ["6667"],
+        "itemBoots": "3158",
+        "itemMyth": "6667"
+      },
+      {
+        "assists": 1,
+        "champExperience": 16345,
+        "championId": 122,
+        "damageDealtToBuildings": 6869,
+        "damageDealtToObjectives": 20098,
+        "deaths": 2,
+        "detectorWardsPlaced": 6,
+        "firstBloodKill": false,
+        "firstTowerKill": true,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 14828,
+        "kills": 9,
+        "magicDamageDealtToChampions": 0,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8010, "var1": 595, "var2": 0, "var3": 0 },
+                { "perk": 9111, "var1": 810, "var2": 200, "var3": 0 },
+                { "perk": 9104, "var1": 15, "var2": 10, "var3": 0 },
+                { "perk": 8299, "var1": 392, "var2": 0, "var3": 0 }
+              ],
+              "style": 8000
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8242, "var1": 21, "var2": 0, "var3": 0 },
+                { "perk": 8473, "var1": 496, "var2": 0, "var3": 0 }
+              ],
+              "style": 8400
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 13567,
+        "summoner1Id": 6,
+        "summoner2Id": 4,
+        "teamId": 200,
+        "teamPosition": "TOP",
+        "timeCCingOthers": 13,
+        "totalDamageTaken": 16541,
+        "totalHeal": 5616,
+        "totalHealsOnTeammates": 0,
+        "totalMinionsKilled": 223,
+        "trueDamageDealtToChampions": 3640,
+        "visionScore": 29,
+        "wardsKilled": 4,
+        "wardsPlaced": 11,
+        "win": true,
+        "damageTakenOnTeamPercentage": 0.1649213001442406,
+        "teamDamagePercentage": 0.1649213001442406,
+        "skillTree": [1, 2, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4],
+        "itemStart": ["1055", "2003"],
+        "itemRarity": ["6631", "3742", "4401"],
+        "itemBoots": "3047",
+        "itemMyth": "6631"
+      },
+      {
+        "assists": 12,
+        "champExperience": 12917,
+        "championId": 245,
+        "damageDealtToBuildings": 3384,
+        "damageDealtToObjectives": 30783,
+        "deaths": 4,
+        "detectorWardsPlaced": 5,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 13246,
+        "kills": 5,
+        "magicDamageDealtToChampions": 19612,
+        "perks": {
+          "statPerks": { "defense": 5003, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8369, "var1": 1008, "var2": 878, "var3": 0 },
+                { "perk": 8304, "var1": 8, "var2": 1, "var3": 5 },
+                { "perk": 8321, "var1": 4, "var2": 0, "var3": 0 },
+                { "perk": 8347, "var1": 0, "var2": 0, "var3": 0 }
+              ],
+              "style": 8300
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8138, "var1": 30, "var2": 0, "var3": 0 },
+                { "perk": 8135, "var1": 450, "var2": 5, "var3": 0 }
+              ],
+              "style": 8100
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 2054,
+        "summoner1Id": 11,
+        "summoner2Id": 4,
+        "teamId": 200,
+        "teamPosition": "JUNGLE",
+        "timeCCingOthers": 19,
+        "totalDamageTaken": 29819,
+        "totalHeal": 14157,
+        "totalHealsOnTeammates": 0,
+        "totalMinionsKilled": 25,
+        "trueDamageDealtToChampions": 1372,
+        "visionScore": 26,
+        "wardsKilled": 4,
+        "wardsPlaced": 6,
+        "win": true,
+        "damageTakenOnTeamPercentage": 0.2973053063923494,
+        "teamDamagePercentage": 0.2973053063923494,
+        "skillTree": [2, 1, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2],
+        "itemStart": ["1102", "2003", "3364"],
+        "itemRarity": ["3152", "3100", "3157"],
+        "itemBoots": "3020",
+        "itemMyth": "3152"
+      },
+      {
+        "assists": 10,
+        "champExperience": 16605,
+        "championId": 112,
+        "damageDealtToBuildings": 5272,
+        "damageDealtToObjectives": 17437,
+        "deaths": 4,
+        "detectorWardsPlaced": 1,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 13535,
+        "kills": 5,
+        "magicDamageDealtToChampions": 22036,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8369, "var1": 881, "var2": 685, "var3": 0 },
+                { "perk": 8313, "var1": 0, "var2": 0, "var3": 0 },
+                { "perk": 8345, "var1": 3, "var2": 0, "var3": 0 },
+                { "perk": 8352, "var1": 303, "var2": 793, "var3": 599 }
+              ],
+              "style": 8300
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8226, "var1": 250, "var2": 1327, "var3": 0 },
+                { "perk": 8237, "var1": 666, "var2": 0, "var3": 0 }
+              ],
+              "style": 8200
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 842,
+        "summoner1Id": 12,
+        "summoner2Id": 4,
+        "teamId": 200,
+        "teamPosition": "MIDDLE",
+        "timeCCingOthers": 17,
+        "totalDamageTaken": 15525,
+        "totalHeal": 2568,
+        "totalHealsOnTeammates": 0,
+        "totalMinionsKilled": 202,
+        "trueDamageDealtToChampions": 948,
+        "visionScore": 21,
+        "wardsKilled": 3,
+        "wardsPlaced": 10,
+        "win": true,
+        "damageTakenOnTeamPercentage": 0.15478705082249156,
+        "teamDamagePercentage": 0.15478705082249156,
+        "skillTree": [
+          1, 3, 3, 2, 3, 4, 3, 3, 1, 1, 3, 1, 2, 4, 1, 1, 2, 2, 4, 2
+        ],
+        "itemStart": ["2033"],
+        "itemRarity": ["6655", "3157", "4645", "3100"],
+        "itemBoots": "3020",
+        "itemMyth": "6655"
+      },
+      {
+        "assists": 6,
+        "champExperience": 11890,
+        "championId": 81,
+        "damageDealtToBuildings": 4510,
+        "damageDealtToObjectives": 19513,
+        "deaths": 5,
+        "detectorWardsPlaced": 3,
+        "firstBloodKill": true,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 13367,
+        "kills": 7,
+        "magicDamageDealtToChampions": 6731,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5005 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8369, "var1": 757, "var2": 589, "var3": 0 },
+                { "perk": 8304, "var1": 9, "var2": 4, "var3": 5 },
+                { "perk": 8345, "var1": 3, "var2": 0, "var3": 0 },
+                { "perk": 8347, "var1": 0, "var2": 0, "var3": 0 }
+              ],
+              "style": 8300
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8226, "var1": 250, "var2": 1493, "var3": 0 },
+                { "perk": 8210, "var1": 5, "var2": 0, "var3": 0 }
+              ],
+              "style": 8200
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 15234,
+        "summoner1Id": 7,
+        "summoner2Id": 4,
+        "teamId": 200,
+        "teamPosition": "BOTTOM",
+        "timeCCingOthers": 4,
+        "totalDamageTaken": 17783,
+        "totalHeal": 2747,
+        "totalHealsOnTeammates": 506,
+        "totalMinionsKilled": 220,
+        "trueDamageDealtToChampions": 1133,
+        "visionScore": 28,
+        "wardsKilled": 5,
+        "wardsPlaced": 12,
+        "win": true,
+        "damageTakenOnTeamPercentage": 0.17730632832298476,
+        "teamDamagePercentage": 0.17730632832298476,
+        "skillTree": [1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2],
+        "itemStart": ["2003", "2003", "3070", "3340"],
+        "itemRarity": ["3078", "3004", "3110"],
+        "itemBoots": "3158",
+        "itemMyth": "3078"
+      },
+      {
+        "assists": 13,
+        "champExperience": 8959,
+        "championId": 497,
+        "damageDealtToBuildings": 90,
+        "damageDealtToObjectives": 931,
+        "deaths": 7,
+        "detectorWardsPlaced": 8,
+        "firstBloodKill": false,
+        "firstTowerKill": false,
+        "gameEndedInEarlySurrender": false,
+        "gameEndedInSurrender": true,
+        "goldEarned": 7831,
+        "kills": 2,
+        "magicDamageDealtToChampions": 6066,
+        "perks": {
+          "statPerks": { "defense": 5002, "flex": 5008, "offense": 5008 },
+          "styles": [
+            {
+              "description": "primaryStyle",
+              "selections": [
+                { "perk": 8465, "var1": 1361, "var2": 0, "var3": 0 },
+                { "perk": 8463, "var1": 781, "var2": 0, "var3": 0 },
+                { "perk": 8473, "var1": 444, "var2": 0, "var3": 0 },
+                { "perk": 8242, "var1": 135, "var2": 0, "var3": 0 }
+              ],
+              "style": 8400
+            },
+            {
+              "description": "subStyle",
+              "selections": [
+                { "perk": 8106, "var1": 5, "var2": 0, "var3": 0 },
+                { "perk": 8136, "var1": 8, "var2": 16, "var3": 0 }
+              ],
+              "style": 8100
+            }
+          ]
+        },
+        "physicalDamageDealtToChampions": 1838,
+        "summoner1Id": 14,
+        "summoner2Id": 4,
+        "teamId": 200,
+        "teamPosition": "UTILITY",
+        "timeCCingOthers": 33,
+        "totalDamageTaken": 20629,
+        "totalHeal": 5813,
+        "totalHealsOnTeammates": 2513,
+        "totalMinionsKilled": 33,
+        "trueDamageDealtToChampions": 496,
+        "visionScore": 73,
+        "wardsKilled": 3,
+        "wardsPlaced": 39,
+        "win": true,
+        "damageTakenOnTeamPercentage": 0.20568001431793365,
+        "teamDamagePercentage": 0.20568001431793365,
+        "skillTree": [2, 1, 3, 2, 2, 4, 2, 3, 2, 3, 4, 3],
+        "itemStart": ["2003", "2003", "3858"],
+        "itemRarity": ["2065", "3050"],
+        "itemBoots": "3158",
+        "itemMyth": "2065"
+      }
+    ],
+    "teams": [
+      {
+        "bans": [
+          { "championId": 22, "pickTurn": 1 },
+          { "championId": 950, "pickTurn": 2 },
+          { "championId": 54, "pickTurn": 3 },
+          { "championId": 7, "pickTurn": 4 },
+          { "championId": 360, "pickTurn": 5 }
+        ],
+        "objectives": {
+          "baron": { "first": false, "kills": 0 },
+          "champion": { "first": false, "kills": 22 },
+          "dragon": { "first": false, "kills": 0 },
+          "inhibitor": { "first": false, "kills": 0 },
+          "riftHerald": { "first": false, "kills": 0 },
+          "tower": { "first": false, "kills": 1 }
+        },
+        "teamId": 100,
+        "win": false
+      },
+      {
+        "bans": [
+          { "championId": 7, "pickTurn": 6 },
+          { "championId": 526, "pickTurn": 7 },
+          { "championId": 266, "pickTurn": 8 },
+          { "championId": 950, "pickTurn": 9 },
+          { "championId": 145, "pickTurn": 10 }
+        ],
+        "objectives": {
+          "baron": { "first": true, "kills": 1 },
+          "champion": { "first": true, "kills": 28 },
+          "dragon": { "first": true, "kills": 3 },
+          "inhibitor": { "first": true, "kills": 1 },
+          "riftHerald": { "first": true, "kills": 2 },
+          "tower": { "first": true, "kills": 9 }
+        },
+        "teamId": 200,
+        "win": true
+      }
+    ]
+  }
+}

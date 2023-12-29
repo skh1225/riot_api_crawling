@@ -82,13 +82,13 @@ class AsyncApiCall:
     info_participants = set(['perks', 'summoner1Id', 'summoner2Id', 'championId', 'teamPosition', 'teamId', 'win', 'damageTakenOnTeamPercentage', 'teamDamagePercentage', 'champExperience', 'goldEarned', 'totalMinionsKilled', 'magicDamageDealtToChampions', 'physicalDamageDealtToChampions', 'trueDamageDealtToChampions', 'damageDealtToBuildings', 'damageDealtToObjectives', 'totalDamageTaken', 'totalHeal', 'totalHealsOnTeammates', 'timeCCingOthers', 'kills', 'deaths', 'assists', 'wardsKilled', 'wardsPlaced', 'detectorWardsPlaced', 'visionScore', 'firstBloodKill', 'firstTowerKill', 'gameEndedInSurrender', 'gameEndedInEarlySurrender'])
     for k in tuple(data['metadata'].keys())[:]:
         if k not in metadata:
-            data['metadata'].pop(k, None)
+            data['metadata'].pop(k, None) 
     for k in tuple(data['info'].keys())[:]:
         if k not in info:
             data['info'].pop(k, None)
     for participant in data['info']['participants']:
         participant['damageTakenOnTeamPercentage'] = participant['challenges']['damageTakenOnTeamPercentage']
-        participant['teamDamagePercentage'] = participant['challenges']['damageTakenOnTeamPercentage']
+        participant['teamDamagePercentage'] = participant['challenges']['teamDamagePercentage']
         for k in tuple(participant.keys())[:]:
             if k not in info_participants:
                 participant.pop(k, None)

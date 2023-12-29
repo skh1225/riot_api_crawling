@@ -1,5 +1,7 @@
 crawler/config/config.py
 crawler/config/*.json
-*.json
+fourth-way-398009-b0ce29a3bf47.json
+gogole_credential.json
 test.py
 airflow/logs/
+.ipynb_checkpoints/

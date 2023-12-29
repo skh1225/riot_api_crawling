@@ -1,0 +1,832 @@
+{
+    "fields": [
+      { "metadata": {}, "name": "collectAt", "nullable": true, "type": "long" },
+      {
+        "metadata": {},
+        "name": "metadata",
+        "nullable": true,
+        "type": {
+          "fields": [
+            {
+              "metadata": {},
+              "name": "gameDuration",
+              "nullable": true,
+              "type": "long"
+            },
+            {
+              "metadata": {},
+              "name": "gameStartTimestamp",
+              "nullable": true,
+              "type": "long"
+            },
+            {
+              "metadata": {},
+              "name": "gameVersion",
+              "nullable": true,
+              "type": "string"
+            },
+            {
+              "metadata": {},
+              "name": "matchId",
+              "nullable": true,
+              "type": "string"
+            },
+            { "metadata": {}, "name": "tier", "nullable": true, "type": "string" }
+          ],
+          "type": "struct"
+        }
+      },
+      {
+        "metadata": {},
+        "name": "participants",
+        "nullable": true,
+        "type": {
+          "containsNull": true,
+          "elementType": {
+            "fields": [
+              {
+                "metadata": {},
+                "name": "allInPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "assistMePings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "assists",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "basicPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "champExperience",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "champLevel",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "championId",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "championTransform",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "commandPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "controlWardTimeCoverageInRiverOrEnemyHalf",
+                "nullable": true,
+                "type": "integer"
+              },
+              {
+                "metadata": {},
+                "name": "damageDealtToBuildings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "damageDealtToObjectives",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "damageSelfMitigated",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "damageTakenOnTeamPercentage",
+                "nullable": true,
+                "type": "double"
+              },
+              {
+                "metadata": {},
+                "name": "dangerPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "deaths",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "detectorWardsPlaced",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "enemyChampionImmobilizations",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "enemyMissingPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "enemyVisionPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "firstBloodKill",
+                "nullable": true,
+                "type": "boolean"
+              },
+              {
+                "metadata": {},
+                "name": "firstTowerKill",
+                "nullable": true,
+                "type": "boolean"
+              },
+              {
+                "metadata": {},
+                "name": "gameEndedInEarlySurrender",
+                "nullable": true,
+                "type": "boolean"
+              },
+              {
+                "metadata": {},
+                "name": "gameEndedInSurrender",
+                "nullable": true,
+                "type": "boolean"
+              },
+              {
+                "metadata": {},
+                "name": "getBackPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "goldEarned",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "goldSpent",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "immobilizeAndKillWithAlly",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "initialBuffCount",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "initialCrabCount",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "itemBuild",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "itemMiddle",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "itemStart",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "kills",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "magicDamageDealtToChampions",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "minionsKilled5M",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "needVisionPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "onMyWayPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "perks",
+                "nullable": true,
+                "type": {
+                  "fields": [
+                    {
+                      "metadata": {},
+                      "name": "statPerks",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "defense",
+                            "nullable": true,
+                            "type": "long"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "flex",
+                            "nullable": true,
+                            "type": "long"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "offense",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "styles",
+                      "nullable": true,
+                      "type": {
+                        "containsNull": true,
+                        "elementType": {
+                          "fields": [
+                            {
+                              "metadata": {},
+                              "name": "description",
+                              "nullable": true,
+                              "type": "string"
+                            },
+                            {
+                              "metadata": {},
+                              "name": "selections",
+                              "nullable": true,
+                              "type": {
+                                "containsNull": true,
+                                "elementType": {
+                                  "fields": [
+                                    {
+                                      "metadata": {},
+                                      "name": "perk",
+                                      "nullable": true,
+                                      "type": "long"
+                                    },
+                                    {
+                                      "metadata": {},
+                                      "name": "var1",
+                                      "nullable": true,
+                                      "type": "long"
+                                    },
+                                    {
+                                      "metadata": {},
+                                      "name": "var2",
+                                      "nullable": true,
+                                      "type": "long"
+                                    },
+                                    {
+                                      "metadata": {},
+                                      "name": "var3",
+                                      "nullable": true,
+                                      "type": "long"
+                                    }
+                                  ],
+                                  "type": "struct"
+                                },
+                                "type": "array"
+                              }
+                            },
+                            {
+                              "metadata": {},
+                              "name": "style",
+                              "nullable": true,
+                              "type": "long"
+                            }
+                          ],
+                          "type": "struct"
+                        },
+                        "type": "array"
+                      }
+                    }
+                  ],
+                  "type": "struct"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "physicalDamageDealtToChampions",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "pushPings",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "puuid",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "saveAllyFromDeath",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "skillTree",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "soloKills",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "spell1Casts",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "spell2Casts",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "spell3Casts",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "spell4Casts",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "summoner1Casts",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "summoner1Id",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "summoner2Casts",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "summoner2Id",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "teamDamagePercentage",
+                "nullable": true,
+                "type": "double"
+              },
+              {
+                "metadata": {},
+                "name": "teamId",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "teamPosition",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "timeCCingOthers",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalDamageDoneToChampions5M",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "totalDamageShieldedOnTeammates",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalDamageTaken",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalDamageTaken5M",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "totalEffectiveDamageDealtToChampions",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalGold5M",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "totalHeal",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalHealsOnTeammates",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalMinionsKilled",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "totalTimeSpentDead",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "trueDamageDealtToChampions",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "visionScore",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "wardTakedowns",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "win",
+                "nullable": true,
+                "type": "boolean"
+              },
+              {
+                "metadata": {},
+                "name": "xp5M",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": "long",
+                  "type": "array"
+                }
+              }
+            ],
+            "type": "struct"
+          },
+          "type": "array"
+        }
+      },
+      { "metadata": {}, "name": "queueId", "nullable": true, "type": "long" },
+      {
+        "metadata": {},
+        "name": "teams",
+        "nullable": true,
+        "type": {
+          "containsNull": true,
+          "elementType": {
+            "fields": [
+              {
+                "metadata": {},
+                "name": "bans",
+                "nullable": true,
+                "type": {
+                  "containsNull": true,
+                  "elementType": {
+                    "fields": [
+                      {
+                        "metadata": {},
+                        "name": "championId",
+                        "nullable": true,
+                        "type": "long"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "pickTurn",
+                        "nullable": true,
+                        "type": "long"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "type": "array"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "objectives",
+                "nullable": true,
+                "type": {
+                  "fields": [
+                    {
+                      "metadata": {},
+                      "name": "baron",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "champion",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "dragon",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "horde",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "inhibitor",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "riftHerald",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    },
+                    {
+                      "metadata": {},
+                      "name": "tower",
+                      "nullable": true,
+                      "type": {
+                        "fields": [
+                          {
+                            "metadata": {},
+                            "name": "first",
+                            "nullable": true,
+                            "type": "boolean"
+                          },
+                          {
+                            "metadata": {},
+                            "name": "kills",
+                            "nullable": true,
+                            "type": "long"
+                          }
+                        ],
+                        "type": "struct"
+                      }
+                    }
+                  ],
+                  "type": "struct"
+                }
+              },
+              {
+                "metadata": {},
+                "name": "teamId",
+                "nullable": true,
+                "type": "long"
+              },
+              {
+                "metadata": {},
+                "name": "win",
+                "nullable": true,
+                "type": "boolean"
+              }
+            ],
+            "type": "struct"
+          },
+          "type": "array"
+        }
+      }
+    ],
+    "type": "struct"
+  }
