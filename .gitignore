@@ -5,3 +5,4 @@ gogole_credential.json
 test.py
 airflow/logs/
 .ipynb_checkpoints/
+logging/

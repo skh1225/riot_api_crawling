@@ -219,6 +219,7 @@ WHERE select_cnt/total_cnt>=0.01
 spark.sql("""
 SELECT a.championId, a.win_cnt/a.pick_cnt as win_rate, a.pick_cnt/a.total_cnt as pick_rate, a.pick_cnt,
 c.statPerks,
+d.perks,
 e.summonerSpell,
 f.damage,
 g.itemStart,

@@ -233,6 +233,7 @@ for i in range(len(tier_list)):
     SELECT a.championId, a.teamPosition, a.win_cnt/a.pick_cnt as win_rate, a.pick_cnt/a.total_cnt as pick_rate, a.pick_cnt,
     b.ban_cnt/a.total_cnt as ban_rate,
     c.statPerks,
+    d.perks,
     e.summonerSpell,
     f.damage,
     g.itemStart,
